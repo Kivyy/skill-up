@@ -1,0 +1,68 @@
+// Place all the styles related to the Homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#firstdiv {
+  background-color: #80edd9;
+  height:600px;
+  color: white;
+   }
+
+#div-one-first {
+ margin: auto;
+ width: 80%;
+}
+
+.stepheader {
+ padding: 10px;
+}
+
+#div-one-secondg {
+ margin: auto;
+ width: 80%;
+}
+
+#seconddiv {
+ background-image: url('http://www.zarofil.com/i/2017/05/black-and-white-nature-hd-wallpaper-desktop-background.jpg');
+ min-height: 100%;
+ background-position: center;
+ background-size: cover;
+ height:350px;
+ color: white;
+ font-size: 25px;
+ font:Montserrat, sans-serif;
+}
+
+.step-col-1 {
+ border-right: thin solid white;
+ height: 200px;
+ padding: 1%
+}
+
+.step-col-2 {
+border-right: thin solid white;
+height: 200px;
+padding: 1%
+}
+
+.step-col-3 {
+border-right: thin solid white;
+height: 200px;
+padding: 1%
+
+}
+
+.step-li {
+  font-size: 20px;
+}
+
+#explore-div {
+  padding: 25px;
+  height: 200px;
+}
+
+#category-div {
+  padding-top: 15px;
+  height: 400px;
+  background-color: #80edd9;
+  color: grey;
+}
