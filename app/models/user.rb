@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   has_many :skills
   has_many :subcategories, :through => :skills
+    has_many :started_chats, foreign_key: "user1_id", class_name: "Connection"
+  has_many :joined_chats, foreign_key: "user2_id", class_name: "Connection"
 
   has_secure_password
 
