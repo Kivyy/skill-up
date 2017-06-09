@@ -3,6 +3,11 @@
   <head>
     <title>SkillUp</title>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <%= action_cable_meta_tag %>
 
@@ -20,31 +25,19 @@
   <body>
     <header class="navbar transparent navbar-fixed-top navbar-inverse navbar-inner">
         <div class="container">
-        </header>
-      </div>
-          <ul class="nav navbar-nav navbar-right">
-            <%= link_to "Skill Up", '#', id: "logo" %>
-          </ul>
-          <nav> 
-          </nav>
+          <%= link_to "Skill Up", '#', id: "logo" %>
+          <nav>
+            <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Home",   '#' ,class: "navbar-li"%></li>
-              <table class="table">
-              <% if logged_in? %>
-              <td>
-                <h4><a href="/logout">Logout</a></h4>
-              </td>
-              <td>
-                <h4><a href="/users/<%=current_user.id%>"><%= current_user.full_name %></a></h4>
-              </td>
-              <% else %>
-              <td>
-                <h4><a href= '/login'> Log In </a></h4>
-              </td>
-              <td>
-                <h4><a href= '/users/new'> Register </a></h4>
-              </td>
-              <% end %>
-            </table>
+              <li><%= link_to "Register",   '#' ,class: "navbar-li"%></li>
+              <li><%= link_to "Login",   '#' ,class: "navbar-li"%></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+
     <%= yield %>
   </body>
+  <footer class="container-fluid bg-4 text-center" id="footer">
+  </footer>
 </html>
