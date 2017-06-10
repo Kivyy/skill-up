@@ -43,3 +43,17 @@ home.subcategories.create(title: "Cleaning")
 home.subcategories.create(title: "Organization")
 home.subcategories.create(title: "Maintenance")
 home.subcategories.create(title: "Decor")
+
+education.subcategories.create(title: "Science")
+education.subcategories.create(title: "Math")
+education.subcategories.create(title: "Literature")
+education.subcategories.create(title: "Social Science")
+
+programming.subcategories.create(title: "Ruby")
+programming.subcategories.create(title: "Javascript")
+programming.subcategories.create(title: "Java")
+programming.subcategories.create(title: "C++")
+
+fitness.subcategories.create(title: "Macros")
+fitness.subcategories.create(title: "Workout programs")
+fitness.subcategories.create(title: "Coaching")
