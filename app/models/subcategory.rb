@@ -3,6 +3,6 @@ class Subcategory < ApplicationRecord
 
   has_many :skills
   has_many :users, :through => :skills
-  
+
   belongs_to :category
 end
