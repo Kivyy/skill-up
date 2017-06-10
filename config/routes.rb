@@ -11,7 +11,12 @@ Rails.application.routes.draw do
 
   get 'rooms/show'
 
+
+  resources :conversations do
+    resources :messages
+  end 
   resources :users, except: [:index]
+
   resources :categories, only: [:index] do
     resources :subcategories, only: [:index, :show]
   end
