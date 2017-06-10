@@ -1,4 +1,4 @@
-class Match < ApplicationRecord
+class UserMatch < ApplicationRecord
   validates :user_1_id, :presence => true, :uniqueness => { :scope => :user_2_id }
   validates :user_2_id, :presence => true, :uniqueness => { :scope => :user_1_id }
 
