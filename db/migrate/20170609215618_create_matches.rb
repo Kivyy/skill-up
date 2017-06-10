@@ -1,9 +1,8 @@
-class CreateConnections < ActiveRecord::Migration[5.1]
+class CreateMatches < ActiveRecord::Migration[5.1]
   def change
-    create_table :connections do |t|
+    create_table :matches do |t|
       t.references :user_1, null: false
       t.references :user_2, null: false
-      t.references :skill
 
       t.timestamps
     end
