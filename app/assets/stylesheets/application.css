@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import "semantic-ui";
 
  #logo {
   float: left;
@@ -40,7 +39,7 @@
 
 body {
   font:Montserrat, sans-serif;
-  margin-top: 100px;
+
 }
 
 #footer {
