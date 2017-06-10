@@ -5,7 +5,7 @@ class CreateSkills < ActiveRecord::Migration[5.1]
       t.references :user, null: false, foreign_key: true
       t.string :title
       t.text :description
-      t.boolean :teachable
+      t.boolean :teach
 
       t.timestamps(null: false)
     end

@@ -21,21 +21,21 @@ ActiveRecord::Schema.define(version: 20170609215624) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "connections", force: :cascade do |t|
+  create_table "matches", force: :cascade do |t|
     t.bigint "user_1_id", null: false
     t.bigint "user_2_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_1_id"], name: "index_connections_on_user_1_id"
-    t.index ["user_2_id"], name: "index_connections_on_user_2_id"
+    t.index ["user_1_id"], name: "index_matches_on_user_1_id"
+    t.index ["user_2_id"], name: "index_matches_on_user_2_id"
   end
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
-    t.bigint "connection_id"
+    t.bigint "match_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["connection_id"], name: "index_messages_on_connection_id"
+    t.index ["match_id"], name: "index_messages_on_match_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20170609215624) do
     t.bigint "user_id", null: false
     t.string "title"
     t.text "description"
-    t.boolean "teachable"
+    t.boolean "teach"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["subcategory_id"], name: "index_skills_on_subcategory_id"
