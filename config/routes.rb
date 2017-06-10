@@ -9,7 +9,13 @@ Rails.application.routes.draw do
 
   get 'rooms/show'
 
-  resources :users, except: [:index]
+  resources :users, except: [:index] do
+    resources :user_matches, only: [:create,:show,:destroy]
+  end
+
+  resources :conversations do
+    resources :messages
+  end
 
   mount ActionCable.server => '/cable'
 end
