@@ -10,7 +10,7 @@
     <tr>
       <th scope="row"><%= c.id %></th>
       <% c.subcategories.each do |s| %>
-        <th><%= s.title %><th>
+      <th><%= link_to s.title, [c, s] %></th>
       <% end %>
     </tr>
   </tbody>

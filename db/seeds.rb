@@ -43,7 +43,7 @@ home.subcategories.create(title: "Cleaning")
 home.subcategories.create(title: "Organization")
 home.subcategories.create(title: "Maintenance")
 home.subcategories.create(title: "Decor")
-
+  
 education.subcategories.create(title: "Science")
 education.subcategories.create(title: "Math")
 education.subcategories.create(title: "Literature")
