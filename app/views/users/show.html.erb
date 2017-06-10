@@ -1,12 +1,13 @@
+<br><br><br><br>
 <h1>User Profile</h1>
 <h2><%= @user.first_name %></h2>
 
-<div>
+<div class="row">
   <h2>Skills</h2>
     <ul>
       <% @user.skills.each do |skill| %>
         <% if skill.teach %>
-          <li><%= skill.title %></li>
+          <li class="col-md-1"><%= skill.title %></li>
         <% end %>
       <% end %>
     </ul>
@@ -17,7 +18,7 @@
     <ul>
       <% @user.skills.each do |skill| %>
         <% if skill.teach === false %>
-          <li><%= skill %></li>
+          <li class="col-md-1"><%= skill %></li>
         <% end %>
       <% end %>
     </ul>
