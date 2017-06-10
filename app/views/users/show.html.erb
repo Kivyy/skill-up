@@ -1,2 +1,39 @@
 <h1>User Profile</h1>
 <h2><%= @user.first_name %></h2>
+
+<div>
+  <h2>Skills</h2>
+    <ul>
+      <% @user.skills.each do |skill| %>
+        <% if skill.teach %>
+          <li><%= skill %></li>
+        <% end %>
+      <% end %>
+    </ul>
+</div>
+
+<div>
+  <h2>Skills I want to Learn</h2>
+    <ul>
+      <% @user.skills.each do |skill| %>
+        <% if skill.teach === false %>
+          <li><%= skill %></li>
+        <% end %>
+      <% end %>
+    </ul>
+</div>
+
+<% if current_user.id === params[:id]
+<%= form_for @skill url: {action: "create"} do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :description %>
+  <%= f.select :teach,[[true],[false]] %>
+  <%= f.select (:subcategory_id) do %>
+    <% @subcategories.each do |subcategory| %>
+      <%= subcategory.id %>
+    <% end %>
+  <% end %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+<% end %>
+
+

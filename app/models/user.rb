@@ -12,4 +12,9 @@ class User < ApplicationRecord
   def full_name
     "#{self.first_name} #{self.last_name}"
   end
+
+  def show
+    @user = User.find_by(id: params[:user_id])
+    @skill = current_user.skills.new
+  end
 end
