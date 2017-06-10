@@ -24,10 +24,8 @@ ActiveRecord::Schema.define(version: 20170609215624) do
   create_table "connections", force: :cascade do |t|
     t.bigint "user_1_id", null: false
     t.bigint "user_2_id", null: false
-    t.bigint "skill_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["skill_id"], name: "index_connections_on_skill_id"
     t.index ["user_1_id"], name: "index_connections_on_user_1_id"
     t.index ["user_2_id"], name: "index_connections_on_user_2_id"
   end
@@ -43,6 +41,9 @@ ActiveRecord::Schema.define(version: 20170609215624) do
   create_table "skills", force: :cascade do |t|
     t.bigint "subcategory_id", null: false
     t.bigint "user_id", null: false
+    t.string "title"
+    t.text "description"
+    t.boolean "teachable"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["subcategory_id"], name: "index_skills_on_subcategory_id"
