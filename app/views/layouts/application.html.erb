@@ -30,7 +30,11 @@
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Home",   '/' ,class: "navbar-li"%></li>
               <li><%= link_to "Register",   '/users/new' ,class: "navbar-li"%></li>
-              <li><%= link_to "Login",   '/sessions/new' ,class: "navbar-li"%></li>
+              <% if logged_in? %>
+                <li><%= link_to "Logout",   '/logout' ,class: "navbar-li"%></li>
+                <% else %>
+                <li><%= link_to "Login",   '/login' ,class: "navbar-li"%></li>
+              <% end %>
             </ul>
           </nav>
         </div>
