@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  include UserHelper
+  include SessionsHelper
   def show
     @user = User.find_by(id: params[:id])
     if @user != current_user
