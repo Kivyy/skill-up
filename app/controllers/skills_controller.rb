@@ -8,8 +8,7 @@ class SkillsController < ApplicationController
   end
 
   def create
-    @skill = Skill.new(skill_params)
-    @user = current_user
+    @skill = current_user.skills.new(skill_params)
     if @skill.save
       flash[:success] = "You've added a skill!"
       redirect_to @user
