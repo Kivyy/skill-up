@@ -18,6 +18,15 @@ class SkillsController < ApplicationController
     end
   end
 
+  def index
+    @skills = Skill.all
+    if params[:search]
+      @skills = Skill.search(params[:search]).order("created_at DESC")
+    else
+      @skills = Skill.all.order("created_at DESC")
+    end
+  end
+
   private
 
   def skill_params

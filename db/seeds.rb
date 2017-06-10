@@ -57,8 +57,13 @@ programming.subcategories.create(title: "Javascript")
 programming.subcategories.create(title: "Java")
 programming.subcategories.create(title: "C++")
 
+
 fitness.subcategories.create(title: "Macros")
 fitness.subcategories.create(title: "Workout programs")
 fitness.subcategories.create(title: "Coaching")
 
-test1 = magic.skills.create(user_id: 1, title: "test", description: "word")
+test1 = magic.skills.create(user_id: 1, title: "Basketball", description: "Dribbling", teach: true)
+test2 = magic.skills.create(user_id: 1, title: "Basketball", description: "3 Point Shot", teach: true)
+test3 = magic.skills.create(user_id: 1, title: "Basketball", description: "Dunking", teach: true)
+
+
