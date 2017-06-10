@@ -1,5 +1,12 @@
 <br><br><br><br>
 <% @skills.each do |skill| %>
+  <div>
+  <%= link_to skill.user.first_name, user_path(skill.user.id) %>
+  <p>
   <%= skill.title %>
-  <%= skill.description %>
+  </p>
+  <p>
+    <%= skill.description %>
+  </p>
+  </div>
 <% end %>
