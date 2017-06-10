@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'rooms/show'
 
   resources :users, except: [:index]
+  resources :categories, only: [:index]
 
   mount ActionCable.server => '/cable'
 end
