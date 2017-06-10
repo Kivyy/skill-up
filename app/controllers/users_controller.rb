@@ -2,8 +2,11 @@ class UsersController < ApplicationController
   include SessionsHelper
   def show
     @user = User.find_by(id: params[:id])
+    @skill = Skill.new
+    @subcategories = Subcategory.all
     if @user != current_user
       redirect_to '/login'
+
     end
   end
 

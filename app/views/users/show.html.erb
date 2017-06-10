@@ -23,17 +23,19 @@
     </ul>
 </div>
 
-<% if current_user.id === params[:id]
-<%= form_for @skill url: {action: "create"} do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :description %>
-  <%= f.select :teach,[[true],[false]] %>
-  <%= f.select (:subcategory_id) do %>
-    <% @subcategories.each do |subcategory| %>
-      <%= subcategory.id %>
+<% if current_user.id === @user.id %>
+  <h2>Add Skill</h2>
+  <%= form_for @skill, url: {action: "create"} do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_area :description %>
+    <%= f.select :teach,[[true],[false]] %>
+    <%= f.select (:subcategory_id) do %>
+      <% @subcategories.each do |subcategory| %>
+        <%= content_tag(:option, subcategory.title, value: subcategory.id) %>
+      <% end %>
     <% end %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
   <% end %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
 <% end %>
 
 
