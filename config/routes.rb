@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   get '/logout',  to: 'sessions#destroy'
 
+  get '/skills/search', to: 'skills#index'
+
   get 'rooms/show'
 
   resources :users, except: [:index]
