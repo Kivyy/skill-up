@@ -5,8 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user1 = User.create(first_name: "kiv" , last_name: "too lo" , birthdate: Date.today, username: "machocho", email: "1@me.com" , password: "password" )
-user2 = User.create(first_name: "Carlos", last_name: "Grijalva", username: "bagel", email: "carlos@test.com", password: "password", birthdate: Date.today)
+
+user = User.create(first_name: "Finn", last_name: "Jake", birthdate: '1990-02-03', username: "adventuretime", email: "finn@test.com", password: "password")
+user2 = User.create(first_name: "Carlos", last_name: "Grijalva", birthdate: '1990-02-03', username: "bagel", email: "carlos@test.com", password: "password")
+
 sports = Category.create(title: "Sports")
 music = Category.create(title: "Music")
 cooking = Category.create(title: "Cooking")
@@ -15,7 +17,8 @@ education = Category.create(title: "Education")
 programming = Category.create(title: "Programming")
 fitness = Category.create(title: "Fitness")
 
-sports.subcategories.create(title: "Basketball")
+
+magic = sports.subcategories.create(title: "Basketball")
 sports.subcategories.create(title: "Football")
 sports.subcategories.create(title: "Soccer")
 sports.subcategories.create(title: "Baseball")
@@ -43,3 +46,19 @@ home.subcategories.create(title: "Cleaning")
 home.subcategories.create(title: "Organization")
 home.subcategories.create(title: "Maintenance")
 home.subcategories.create(title: "Decor")
+
+education.subcategories.create(title: "Science")
+education.subcategories.create(title: "Math")
+education.subcategories.create(title: "Literature")
+education.subcategories.create(title: "Social Science")
+
+programming.subcategories.create(title: "Ruby")
+programming.subcategories.create(title: "Javascript")
+programming.subcategories.create(title: "Java")
+programming.subcategories.create(title: "C++")
+
+fitness.subcategories.create(title: "Macros")
+fitness.subcategories.create(title: "Workout programs")
+fitness.subcategories.create(title: "Coaching")
+
+test1 = magic.skills.create(user_id: 1, title: "test", description: "word")

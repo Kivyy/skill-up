@@ -1,11 +1,10 @@
 <% if @errors %>
+<div class="alert alert-danger" role="alert">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
     <div id="error_explanation">
-      <ul>
-      <% @errors.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+      <%= @errors %>
     </div>
+  </div>
 <% end %>
 
 

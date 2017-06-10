@@ -7,14 +7,18 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   get '/logout',  to: 'sessions#destroy'
 
+  get '/skills/search', to: 'skills#index'
+
   get 'rooms/show'
 
-  resources :users, except: [:index] do
-    resources :user_matches, only: [:create,:show,:destroy]
-  end
 
   resources :conversations do
     resources :messages
+  end 
+  resources :users, except: [:index]
+
+  resources :categories, only: [:index] do
+    resources :subcategories, only: [:index, :show]
   end
 
   mount ActionCable.server => '/cable'
