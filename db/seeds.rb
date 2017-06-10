@@ -15,7 +15,8 @@ education = Category.create(title: "Education")
 programming = Category.create(title: "Programming")
 fitness = Category.create(title: "Fitness")
 
-sports.subcategories.create(title: "Basketball")
+
+magic = sports.subcategories.create(title: "Basketball")
 sports.subcategories.create(title: "Football")
 sports.subcategories.create(title: "Soccer")
 sports.subcategories.create(title: "Baseball")
@@ -43,7 +44,7 @@ home.subcategories.create(title: "Cleaning")
 home.subcategories.create(title: "Organization")
 home.subcategories.create(title: "Maintenance")
 home.subcategories.create(title: "Decor")
-  
+
 education.subcategories.create(title: "Science")
 education.subcategories.create(title: "Math")
 education.subcategories.create(title: "Literature")
@@ -57,3 +58,5 @@ programming.subcategories.create(title: "C++")
 fitness.subcategories.create(title: "Macros")
 fitness.subcategories.create(title: "Workout programs")
 fitness.subcategories.create(title: "Coaching")
+
+test1 = magic.skills.create(user_id: 1, title: "test", description: "word")
