@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/logout',  to: 'sessions#destroy'
   get '/users/:id', to: 'users#show'
 
+  get '/skills/search', to: 'skills#index'
+
   get 'rooms/show'
 
   resources :users, except: [:index]
