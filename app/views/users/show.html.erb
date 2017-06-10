@@ -6,7 +6,7 @@
     <ul>
       <% @user.skills.each do |skill| %>
         <% if skill.teach %>
-          <li><%= skill %></li>
+          <li><%= skill.title %></li>
         <% end %>
       <% end %>
     </ul>
@@ -46,5 +46,3 @@
     <%= f.submit "Add Skill" %>
   <% end %>
 <% end %>
-
-
