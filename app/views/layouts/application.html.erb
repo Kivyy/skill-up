@@ -29,7 +29,7 @@
           <nav>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Home",   '/' ,class: "navbar-li"%></li>
-              <li><%= link_to "Register",   '/users/new' ,class: "navbar-li"%></li>
+              <li><%= link_to "Register", new_user_path ,class: "navbar-li"%></li>
               <% if logged_in? %>
                 <li><%= link_to "Logout",   '/logout' ,class: "navbar-li"%></li>
                 <% else %>
