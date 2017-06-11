@@ -15,4 +15,9 @@ module ApplicationHelper
    session.delete(:user_id)
    @current_user = nil
  end
+
+def get_var
+   Subcategory.all
+end
+
 end
