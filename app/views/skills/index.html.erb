@@ -1,5 +1,12 @@
 <br><br><br><br>
+
 <% @skills.each do |skill| %>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+
+
   <div>
   <% if skill.teach %>
     <h2>People who can teach</h2>
@@ -21,4 +28,7 @@
     </p>
   <% end %>
   </div>
+       </div>
+    </div>
+</div>
 <% end %>
