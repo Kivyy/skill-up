@@ -5,7 +5,7 @@ class Skill < ApplicationRecord
   belongs_to :subcategory
   belongs_to :user
 
-  def self.search(search)
-    where("LOWER(description) LIKE ? OR LOWER(title) LIKE ?","%#{search.downcase}%", "%#{search.downcase}%")
+  def self.search(search, subcategory)
+    where("subcategory_id = ? AND (LOWER(description) LIKE ? OR LOWER(title) LIKE ?)", subcategory.to_i, "%#{search.downcase}%", "%#{search.downcase}%")
   end
 end
