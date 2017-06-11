@@ -29,6 +29,7 @@
     </div><br>
 
     <div>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
       <%= f.submit "Add Reply", class: "btn btn-primary"  %>
     </div>
 
