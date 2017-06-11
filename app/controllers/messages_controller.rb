@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
       @over_ten = false
       @messages = @conversation.messages
     end
-    
+
     # if @messages.last
     #   if @messages.last.user_id != current_user.id
     #     @messages.last.read = true;
