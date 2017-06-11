@@ -1,5 +1,13 @@
 <br><br><br><br>
+
 <% @skills.each do |skill| %>
-  <%= skill.title %>
-  <%= skill.description %>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <%= skill.title %>
+            <%= skill.description %>
+        </div>
+    </div>
+</div>
 <% end %>
