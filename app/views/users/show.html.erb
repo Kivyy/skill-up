@@ -82,3 +82,21 @@
   <% end %>
   <br><br>
 </div>
+
+<div class="">
+  <h1>Requests</h1>
+  <% if @user.sender_conversations.any? %>
+    <% @user.sender_conversations.each do |c| %>
+    <br>
+    <%= link_to "conversation with #{c.recipient.username}", conversation_messages_path(c) %>
+    <% end %>
+  <% end %>
+
+  <h1>Recieved</h1>
+  <% if @user.recipient_conversations.any? %>
+    <% @user.recipient_conversations.each do |c| %>
+    <br>
+    <%= link_to "conversation with #{c.sender.username}", conversation_messages_path(c) %>
+    <% end %>
+  <% end %>
+</div>
