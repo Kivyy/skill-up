@@ -1,7 +1,16 @@
 class SkillsController < ApplicationController
   include SessionsHelper
   def index
+    @skills = Skill.all
+    if params[:search]
+      @skills = Skill.search(params[:search]).order("created_at DESC")
+    else
+      @skills = Skill.all.order("created_at DESC")
+    end
+  end
 
+  def show
+    @skill = Skill.find_by(id: params[:id])
   end
 
   def new
@@ -15,15 +24,6 @@ class SkillsController < ApplicationController
       redirect_to current_user
     else
       redirect_to current_user
-    end
-  end
-
-  def index
-    @skills = Skill.all
-    if params[:search]
-      @skills = Skill.search(params[:search]).order("created_at DESC")
-    else
-      @skills = Skill.all.order("created_at DESC")
     end
   end
 
