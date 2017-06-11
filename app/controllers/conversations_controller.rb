@@ -2,24 +2,20 @@ class ConversationsController < ApplicationController
 before_action :authenticate_user
 
   def index
-  @users = User.all
-  @conversations = Conversation.all
+    @user = current_user
+    @users = User.all
+    @conversations = Conversation.all
   end
 
   def create
-#     if Conversation.between(params[:sender_id],params[:recipient_id]).present?
-#       @conversation = Conversation.between(params[:sender_id],params[:recipient_id]).first
-#     else
-#       @conversation = Conversation.create!(conversation_params)
-#     end
     @conversation = Conversation.find_or_create_by(conversation_params)
-    redirect_to conversation_messages_path(@conversation)
+    redirect_to  conversation_messages_path(@conversation)
   end
 
   private
 
   def conversation_params
-  params.permit(:sender_id, :recipient_id)
+  params.require(:conversation).permit(:sender_id, :recipient_id)
   end
 
 end

@@ -21,7 +21,7 @@
   color: gray;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 40px;
   font-weight: bold;
 }
 
@@ -42,9 +42,31 @@ body {
 
 }
 
+th {
+  font-size: 20px;
+}
+
 #footer {
   background-color: #5a5c5e;
   height: 150px;
 }
 
+.right-table {
+    width:47%;
+    margin-right:2%;
+    float: right;
+}
+
+.left-table {
+    width:47%;
+    margin-right:2%;
+    float: left;
+}
+
+.add-skill {
+  margin-top: 200px;
+  width:47%;
+  margin-right:2%;
+  float: right;
+}
 

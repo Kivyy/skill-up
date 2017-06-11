@@ -18,6 +18,7 @@ class SkillsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @skill = current_user.skills.new(skill_params)
     if @skill.save
       flash[:success] = "You've added a skill!"
