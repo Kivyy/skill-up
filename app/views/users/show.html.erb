@@ -9,9 +9,6 @@
     <div class="col-xs-12 col-sm-6 col-md-6">
       <div class="well well-sm">
         <div class="row">
-          <div class="col-sm-6 col-md-4">
-            <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
-          </div>
           <div class="col-sm-6 col-md-8">
             <h2>
               <%= @user.username %></h2>
@@ -23,37 +20,40 @@
               <p><br>
                 <i class="glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;<%= @user.email %>
                 <br /><br>
+                <% if current_user.id === @user.id %>
                 <%= link_to "Edit Profile", edit_user_path(@user) %>
+                <% end %>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-<div class="left-table">
-  <table class="table">
-    <thead class="thead-inverse">
-      <th scope="row">Skills I have</th>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <% @user.skills.each do |skill| %>
-        <% if skill.teach %>
+<div class="container">
+  <div class="left-table">
+    <table class="table">
+      <thead class="thead-inverse">
+        <th scope="row">Skills I have</th>
         <tr>
-          <td><%= skill.title %></td>
-          <td><%= skill.description %></td>
+          <th>Title</th>
+          <th>Description</th>
         </tr>
-        <% end %>
-      <% end %>
+      </thead>
+      <tbody>
 
-    </tbody>
-  </table>
-</div>
+        <% @user.skills.each do |skill| %>
+          <% if skill.teach %>
+          <tr>
+            <td><%= skill.title %></td>
+            <td><%= skill.description %></td>
+          </tr>
+          <% end %>
+        <% end %>
+
+      </tbody>
+    </table>
+  </div>
+
 
 <div class="right-table">
   <table class="table">
@@ -78,7 +78,9 @@
     </tbody>
   </table>
 </div>
+</div>
 <br>
+
 <div class="add-skill">
   <% if current_user.id === @user.id %>
     <h2>Add Skill</h2>
@@ -89,13 +91,15 @@
       <%= f.text_field :title %>
       <br>
       <br>
-      <%= f.select (:teach) do %>
+      <label for="purpose">&nbsp;Purpose:</label>
+      <%= f.select (:teach), class: "custom-select" do %>
         <% [['teach', true],['learn',false]].each do |c| %>
           <%= content_tag(:option, c.first, value: c.last) %>
         <% end %>
       <% end %>
       <br>
       <br>
+      <label for="subcategory">&nbsp;Subcategory:</label>
       <%= f.select (:subcategory_id) do %>
         <% @subcategories.each do |subcategory| %>
           <%= content_tag(:option, subcategory.title, value: subcategory.id) %>
@@ -107,13 +111,13 @@
       <br>
       <%= f.text_area :description %>
       </div>
-      <%= f.submit "Add Skill" %>
+      <%= f.submit "Add Skill", class: "btn btn-primary" %>
     <% end %>
   <% end %>
   <br><br>
 </div>
 
-<div class="">
+<div class="container">
   <h1>Requests</h1>
   <% if @user.sender_conversations.any? %>
     <% @user.sender_conversations.each do |c| %>
