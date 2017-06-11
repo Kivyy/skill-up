@@ -2,27 +2,42 @@
 <h1>User Profile</h1>
 <h2><%= @user.first_name %></h2>
 
-<div class="row">
-  <h2>Skills</h2>
-    <ul>
-      <% @user.skills.each do |skill| %>
-        <% if skill.teach %>
-          <li class="col-md-1"><%= skill.title %></li>
-        <% end %>
-      <% end %>
-    </ul>
-</div>
+<table class="table">
+  <thead>
+    <tr>
 
-<div>
-  <h2>Skills I want to Learn</h2>
-    <ul>
-      <% @user.skills.each do |skill| %>
-        <% if skill.teach === false %>
-          <li class="col-md-1"><%= skill %></li>
+      <th>Skills</th>
+      <th></th>
+      <th>Skills I want to Learn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>
+        <ul>
+        <% @user.skills.each do |skill| %>
+          <% if skill.teach %>
+            <li class="col-md-1"><%= skill.title %></li>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
-</div>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>
+        <ul>
+        <% @user.skills.each do |skill| %>
+          <% if skill.teach === false %>
+            <li class="col-md-1"><%= skill %></li>
+          <% end %>
+        <% end %>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <% if current_user.id === @user.id %>
   <h2>Add Skill</h2>
