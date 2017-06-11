@@ -1,48 +1,78 @@
 <br><br><br><br><br><br><br>
-
 <% if @errors %>
 <%= @errors %>
-  <% end %>
+<% end %>
 
-
-<h1>User Profile</h1>
-<h2><%= @user.first_name %></h2>
+<div class="container">
+  <h1>WELCOME <%= @user.first_name %></h1>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="well well-sm">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+          </div>
+          <div class="col-sm-6 col-md-8">
+            <h2>
+              <%= @user.username %></h2>
+              <label>First Name: </label>
+              <%= @user.first_name %>
+              <br>
+              <label>Last Name: </label>
+              <%= @user.last_name %>
+              <p>
+                <i class="glyphicon glyphicon-envelope"></i><%= @user.email %>
+                <br />
+                <i class="glyphicon glyphicon-gift"></i><%= @user.birthdate.strftime('%r') %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 <div class="left-table">
   <table class="table">
     <thead class="thead-inverse">
+      <th scope="row">Skills I have</th>
       <tr>
+        <th>Title</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
 
-      <th scope="row">Skills I have</th>
       <% @user.skills.each do |skill| %>
-      <% if skill.teach %>
-      <tr>
-        <td><%= skill.title %></td>
-      </tr>
-      <% end %>
+        <% if skill.teach %>
+        <tr>
+          <td><%= skill.title %></td>
+          <td><%= skill.description %></td>
+        </tr>
+        <% end %>
       <% end %>
 
     </tbody>
   </table>
 </div>
+
 <div class="right-table">
   <table class="table">
     <thead class="thead-inverse">
+      <th scope="row">Skills I want to learn</th>
       <tr>
+        <th>Title</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
 
-      <th scope="row">Skills I want to Learn</th>
       <% @user.skills.each do |skill| %>
-      <% if skill.teach === false %>
-      <tr>
-        <td><%= skill.title %></td>
-      </tr>
-      <% end %>
+        <% if skill.teach === false %>
+        <tr>
+          <td><%= skill.title %></td>
+          <td><%= skill.description %></td>
+        </tr>
+        <% end %>
       <% end %>
 
     </tbody>
