@@ -20,11 +20,11 @@
           <%= link_to "Skill Up", '/', id: "logo" %>
           <nav>
             <ul class="nav navbar-nav navbar-right">
-            <%= form_tag skills_search_path, :method => 'get' do %><br>
-              <p>
+            <%= form_tag skills_search_path, :method => 'get' do %>
+              <li>
                 <%= text_field_tag :search, params[:search] %>
                 <%= submit_tag "Search", :name => nil, class: "btn btn-default" %>
-              </p>
+              </li>
           <% end %>
 
               <li><%= link_to "Home",   '/' ,class: "navbar-li"%></li>
