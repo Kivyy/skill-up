@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <p>Subcategory</p>
+    <p><%= @skill.subcategory.title %></p>
+  </div>
+  <div>
+    <p><%= @skill.description %></p>
+  </div>
+  <div>
+    <div>
+      <p><%= link_to "See #{@skill.user.username}'s full profile", @skill.user %></p>
+    </div>
+    <div>
+      <p>
+        <%= form_for :conversation, url: '/conversations' do |f| %>
+          <%= f.hidden_field :sender_id, :value => current_user.id %>
+          <%= f.hidden_field :recipient_id, :value => @skill.user.id %>
+          <%= f.submit "Connect with #{@skill.user.username}!" %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+</div>

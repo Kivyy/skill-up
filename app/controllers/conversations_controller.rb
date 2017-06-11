@@ -7,11 +7,12 @@ before_action :authenticate_user
   end
 
   def create
-    if Conversation.between(params[:sender_id],params[:recipient_id]).present?
-      @conversation = Conversation.between(params[:sender_id],params[:recipient_id]).first
-    else
-      @conversation = Conversation.create!(conversation_params)
-    end
+#     if Conversation.between(params[:sender_id],params[:recipient_id]).present?
+#       @conversation = Conversation.between(params[:sender_id],params[:recipient_id]).first
+#     else
+#       @conversation = Conversation.create!(conversation_params)
+#     end
+    @conversation = Conversation.find_or_create_by(conversation_params)
     redirect_to conversation_messages_path(@conversation)
   end
 
