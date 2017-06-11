@@ -4,7 +4,7 @@
 <% end %>
 
 <div class="container">
-  <h1>WELCOME <%= @user.first_name %></h1>
+  <h1>Welcome <%= @user.first_name %>!</h1>
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6">
       <div class="well well-sm">
@@ -17,13 +17,13 @@
               <%= @user.username %></h2>
               <label>First Name: </label>
               <%= @user.first_name %>
-              <br>
+              <br><br>
               <label>Last Name: </label>
               <%= @user.last_name %>
-              <p>
-                <i class="glyphicon glyphicon-envelope"></i><%= @user.email %>
-                <br />
-                <i class="glyphicon glyphicon-gift"></i><%= @user.birthdate.strftime('%r') %></p>
+              <p><br>
+                <i class="glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;<%= @user.email %>
+                <br /><br>
+                <%= link_to "Edit Profile", edit_user_path(@user) %>
               </div>
             </div>
           </div>
