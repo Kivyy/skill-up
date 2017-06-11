@@ -5,6 +5,7 @@ class Skill < ApplicationRecord
   belongs_to :subcategory
   belongs_to :user
 
+<<<<<<< HEAD
   include PgSearch
   # multisearchable :against => [:description]
   pg_search_scope :search, against: [:description]
@@ -19,6 +20,10 @@ class Skill < ApplicationRecord
     else
       scope
     end
+=======
+  def self.search(search, subcategory)
+    where("subcategory_id = ? AND (LOWER(description) LIKE ? OR LOWER(title) LIKE ?)", subcategory.to_i, "%#{search.downcase}%", "%#{search.downcase}%")
+>>>>>>> master
   end
 
 end
