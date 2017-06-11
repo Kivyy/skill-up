@@ -1,47 +1,84 @@
+<br><br><br><br><br><br><br>
+
+<% if @errors %>
+<%= @errors %>
+  <% end %>
+
+
 <h1>User Profile</h1>
 <h2><%= @user.first_name %></h2>
 
-<div>
-  <h2>Skills</h2>
-    <ul>
+<div class="left-table">
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+      </tr>
+    </thead>
+    <tbody>
+
+      <th scope="row">Skills I have</th>
       <% @user.skills.each do |skill| %>
-        <% if skill.teach %>
-          <li><%= skill.title %></li>
+      <% if skill.teach %>
+      <tr>
+        <td><%= skill.title %></td>
+      </tr>
+      <% end %>
+      <% end %>
+
+    </tbody>
+  </table>
+</div>
+<div class="right-table">
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+      </tr>
+    </thead>
+    <tbody>
+
+      <th scope="row">Skills I want to Learn</th>
+      <% @user.skills.each do |skill| %>
+      <% if skill.teach === false %>
+      <tr>
+        <td><%= skill.title %></td>
+      </tr>
+      <% end %>
+      <% end %>
+
+    </tbody>
+  </table>
+</div>
+<br>
+<div class="add-skill">
+  <% if current_user.id === @user.id %>
+    <h2>Add Skill</h2>
+    <%= form_for @skill do |f| %>
+      <%= f.label :title %>
+      <br>
+      <br>
+      <%= f.text_field :title %>
+      <br>
+      <br>
+      <%= f.select (:teach) do %>
+        <% [['teach', true],['learn',false]].each do |c| %>
+          <%= content_tag(:option, c.first, value: c.last) %>
         <% end %>
       <% end %>
-    </ul>
-</div>
-
-<div>
-  <h2>Skills I want to Learn</h2>
-    <ul>
-      <% @user.skills.each do |skill| %>
-        <% if skill.teach === false %>
-          <li><%= skill %></li>
+      <br>
+      <br>
+      <%= f.select (:subcategory_id) do %>
+        <% @subcategories.each do |subcategory| %>
+          <%= content_tag(:option, subcategory.title, value: subcategory.id) %>
         <% end %>
       <% end %>
-    </ul>
-</div>
-
-<% if current_user.id === @user.id %>
-  <h2>Add Skill</h2>
-  <%= form_for @skill do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.select (:teach) do %>
-      <% [['teach', true],['learn',false]].each do |c| %>
-        <%= content_tag(:option, c.first, value: c.last) %>
-      <% end %>
+      <div>
+      <%= f.label :description %>
+      <br>
+      <br>
+      <%= f.text_area :description %>
+      </div>
+      <%= f.submit "Add Skill" %>
     <% end %>
-    <%= f.select (:subcategory_id) do %>
-      <% @subcategories.each do |subcategory| %>
-        <%= content_tag(:option, subcategory.title, value: subcategory.id) %>
-      <% end %>
-    <% end %>
-    <div>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-    </div>
-    <%= f.submit "Add Skill" %>
   <% end %>
-<% end %>
+  <br><br>
+</div>
