@@ -30,7 +30,7 @@
         <ul>
         <% @user.skills.each do |skill| %>
           <% if skill.teach === false %>
-            <li class="col-md-1"><%= skill %></li>
+            <li class="col-md-1"><%= skill.title %></li>
           <% end %>
         <% end %>
         </ul>
