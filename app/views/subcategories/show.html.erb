@@ -4,6 +4,6 @@
 <br>
 <ul>
   <% @subcategory.skills.each do |skill| %>
-    <li><%= skill.user.username %></li>
+    <li><%= link_to skill.user.username, skill %></li>
   <% end %>
 </ul>

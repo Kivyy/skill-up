@@ -42,7 +42,30 @@ body {
 
 }
 
+th {
+  font-size: 30px;
+}
+
 #footer {
   background-color: #5a5c5e;
   height: 150px;
+}
+
+.right-table {
+    width:47%;
+    margin-right:2%;
+    float: right;
+}
+
+.left-table {
+    width:47%;
+    margin-right:2%;
+    float: left;
+}
+
+.add-skill {
+  margin-top: 200px;
+  width:47%;
+  margin-right:2%;
+  float: right;
 }
