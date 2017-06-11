@@ -5,6 +5,7 @@ class SubcategoriesController < ApplicationController
   end
 
   def show
+    @user = current_user
     @subcategory = Subcategory.find_by(id: params[:id])
   end
 end
