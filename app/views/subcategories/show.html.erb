@@ -1,5 +1,9 @@
-<h1><%= @subcategory.title %></h1>
+<br><br><br><br><br><br><br>
 
-<% @subcategory.skills.each do |skill| %>
-  <%= skill.user.username %>
-<% end %>
+<h1><%= @subcategory.title %></h1>
+<br>
+<ul>
+  <% @subcategory.skills.each do |skill| %>
+    <li><%= link_to skill.user.username, skill %></li>
+  <% end %>
+</ul>

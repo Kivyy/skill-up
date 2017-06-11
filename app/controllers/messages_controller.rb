@@ -15,11 +15,11 @@ class MessagesController < ApplicationController
       @messages = @conversation.messages
     end
 
-    # if @messages.last
-    #   if @messages.last.user_id != current_user.id
-    #     @messages.last.read = true;
-    #   end
-    # end
+    if @messages.last
+      if @messages.last.user_id != current_user.id
+        @messages.last.read = true;
+      end
+    end
 
     @message = @conversation.messages.new
   end
@@ -30,9 +30,10 @@ class MessagesController < ApplicationController
   end
 
   def create
+    @conversation = Conversation.find_by(id: params[:conversation_id])
     @message = @conversation.messages.new(message_params)
-  if @message.save
-    redirect_to conversation_messages_path(@conversation)
+    if @message.save
+      redirect_to conversation_messages_path(@conversation)
   end
 
   end
