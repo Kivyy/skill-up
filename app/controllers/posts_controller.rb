@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   include SessionsHelper
 
+  def new
+
+  end
+  
   def create
     @user = current_user
     @post = current_user.posts.new(post_params)
