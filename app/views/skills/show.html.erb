@@ -1,25 +1,13 @@
+<br><br><br><br><br>
 <div>
   <div>
     <p>Skill</p>
-    <p><%= @skill.title %></p>
+    <p>Title: <%= @skill.title %></p>
   </div>
   <div>
-    <%= @skill.posts.each do |post|%>
-      <p><%= post.description %></p>
-      <p><%= link_to "See #{post.user.username}'s full profile", post.user %></p>
+    <% @skill.posts.each do |post|%>
+      <p>Description: <%= post.description %></p>
+      <p><%= link_to "Post Page", post %></p>
     <% end %>
-  </div>
-  <div>
-    <div>
-    </div>
-    <div>
-      <p>
-        <%= form_for :apprenticeship, url: '/apprenticeships' do |f| %>
-          <%= f.hidden_field :sender_id, :value => current_user.id %>
-          <%= f.hidden_field :recipient_id, :value => @skill.user.id %>
-          <%= f.submit "Connect with #{@skill.user.username}!", class: "btn btn-primary" %>
-        <% end %>
-      </p>
-    </div>
   </div>
 </div>
