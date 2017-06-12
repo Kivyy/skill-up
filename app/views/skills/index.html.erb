@@ -8,27 +8,20 @@
 
 
 
-<h2>People who can teach</h2>
+<h2>Skill Index</h2>
 <div class='container-fluid'>
 <div class='row'>
 <% @skills.each do |skill| %>
-<% if skill.teach %>
-<div class="card-block col-md-4 col-xs-12">
-        <%= link_to image_tag(skill.subcategory.img_url, :class => "img-fluid", size: "540x400"), user_path(skill.user.id) %>
-    <div class="card-block">
-        <h4 class="card-title"><%= skill.title %></h4>
-        <p class="card-text"><%= skill.description %></p>
-
-    </div>
-</div>
+  <% skill.posts.each do |post| %>
+      <% if post.teach %>
+      <div class="card-block col-md-4 col-xs-12">
+          <div class="card-block">
+             <p class="card-title">Title: <%= skill.title %></p>
+              <p class="card-text">Description: <%= post.description %></p>
+          </div>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
 </div>
 </div>
-
-
-
-
-
-
-
