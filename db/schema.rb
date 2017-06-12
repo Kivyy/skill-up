@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20170612161600) do
     t.bigint "skill_id"
     t.bigint "creator_id"
     t.text "description", null: false
-    t.boolean "teach", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["creator_id"], name: "index_posts_on_creator_id"
