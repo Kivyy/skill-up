@@ -40,63 +40,17 @@
         </tr>
       </thead>
       <tbody>
-
         <% @user.posts.each do |post| %>
-          <% if post.teach %>
           <tr>
             <td><%= post.skill.title %></td>
             <td><%= post.description %></td>
           </tr>
-          <% end %>
         <% end %>
-
       </tbody>
     </table>
   </div>
-
-
-<div class="right-table">
-  <table class="table">
-    <thead class="thead-inverse">
-      <th scope="row">Skills I want to learn</th>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <% @user.posts.each do |post| %>
-        <% if post.teach === false %>
-        <tr>
-          <td><%= post.skill.title %></td>
-          <td><%= post.description %></td>
-        </tr>
-        <% end %>
-      <% end %>
-
-    </tbody>
-  </table>
-</div>
 </div>
 <br>
-
-<div class="add-skill">
-  <% if current_user.id === @user.id %>
-    <h2>Add Skill</h2>
-    <%= form_for @skill do |f| %>
-
-        <%= f.label :category %>
-        <%= f.select :category, ['Sports', 'Music', 'Cooking', 'Home', 'Education', 'Programming', 'Fitness']%>
-        <br>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-        <br>
-      <%= f.submit "Add Skill", class: "btn btn-primary" %>
-    <% end %>
-  <% end %>
-  <br><br>
-</div>
 
 <div class="container">
   <h1>Requests</h1>
