@@ -40,46 +40,18 @@
         </tr>
       </thead>
       <tbody>
-
         <% @user.posts.each do |post| %>
-          <% if post.teach %>
           <tr>
             <td><%= post.skill.title %></td>
             <td><%= post.description %></td>
           </tr>
-          <% end %>
         <% end %>
-
       </tbody>
     </table>
   </div>
-
-
-<div class="right-table">
-  <table class="table">
-    <thead class="thead-inverse">
-      <th scope="row">Skills I want to learn</th>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <% @user.posts.each do |post| %>
-        <% if post.teach === false %>
-        <tr>
-          <td><%= post.skill.title %></td>
-          <td><%= post.description %></td>
-        </tr>
-        <% end %>
-      <% end %>
-
-    </tbody>
-  </table>
-</div>
 </div>
 <br>
+
 
 <div class="add-skill">
   <% if current_user.id === @user.id %>
@@ -96,22 +68,5 @@
     <% end %>
   <% end %>
   <br><br>
-</div>
 
-<div class="container">
-  <h1>Requests</h1>
-  <% if @user.apprenticeships.any? %>
-    <% @user.apprenticeships.each do |c| %>
-    <br>
-    <%= link_to "apprenticeship with #{c.recipient.username}", apprenticeship_messages_path(c) %>
-    <% end %>
-  <% end %>
-
-  <h1>Recieved</h1>
-  <% if @user.apprenticeships.any? %>
-    <% @user.apprenticeships.each do |c| %>
-    <br>
-    <%= link_to "apprenticeship with #{c.sender.username}", apprenticeship_messages_path(c) %>
-    <% end %>
-  <% end %>
 </div>
