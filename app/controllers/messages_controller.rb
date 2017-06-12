@@ -1,18 +1,18 @@
 class MessagesController < ApplicationController
   before_action do
-    @conversation = Conversation.find(params[:conversation_id])
+    @apprenticeship = Apprenticeship.find(params[:apprenticeship_id])
   end
 
 
   def index
-    @messages = @conversation.messages
+    @messages = @apprenticeship.messages
     if @messages.length > 10
       @over_ten = true
       @messages = @messages[-10..-1]
     end
     if params[:m]
       @over_ten = false
-      @messages = @conversation.messages
+      @messages = @apprenticeship.messages
     end
 
     if @messages.last
@@ -21,22 +21,22 @@ class MessagesController < ApplicationController
       end
     end
 
-    @message = @conversation.messages.new
+    @message = @apprenticeship.messages.new
   end
 
 
   def new
-    @message = @conversation.messages.new
+    @message = @apprenticeship.messages.new
   end
 
   def create
-    @conversation = Conversation.find_by(id: params[:conversation_id])
-    @message = @conversation.messages.new(message_params)
+    @apprenticeship = Apprenticeship.find_by(id: params[:apprenticeship_id])
+    @message = @apprenticeship.messages.new(message_params)
     if @message.save
       if request.xhr?
         render :partial => 'message', :locals =>{:user => @message.user, :message => @message} , layout: false
       else
-        redirect_to conversation_messages_path(@conversation)
+        redirect_to apprenticeship_messages_path(@apprenticeship)
       end
     end
 

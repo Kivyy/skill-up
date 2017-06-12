@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'rooms/show'
 
   resources :skills
-  resources :conversations do
+  resources :apprenticeships do
     resources :messages
   end
   resources :users, except: [:index]
