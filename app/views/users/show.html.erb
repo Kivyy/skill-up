@@ -97,21 +97,3 @@
   <% end %>
   <br><br>
 </div>
-
-<div class="container">
-  <h1>Requests</h1>
-  <% if @user.apprenticeships.any? %>
-    <% @user.apprenticeships.each do |c| %>
-    <br>
-    <%= link_to "apprenticeship with #{c.recipient.username}", apprenticeship_messages_path(c) %>
-    <% end %>
-  <% end %>
-
-  <h1>Recieved</h1>
-  <% if @user.apprenticeships.any? %>
-    <% @user.apprenticeships.each do |c| %>
-    <br>
-    <%= link_to "apprenticeship with #{c.sender.username}", apprenticeship_messages_path(c) %>
-    <% end %>
-  <% end %>
-</div>

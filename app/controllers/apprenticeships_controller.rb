@@ -2,11 +2,12 @@ class ApprenticeshipsController < ApplicationController
 before_action :authenticate_user
 
   def create
-    @post = Post.find_by(post_id: params[:id])
-    byebug
-    @apprenticeship = @post.Apprenticeship.find_or_create_by(apprenticeship_params)
-
-    redirect_to  apprenticeship_messages_path(@apprenticeship)
+    @apprenticeship = Apprenticeship.find_or_create_by(apprenticeship_params)
+    if @apprenticeship
+      redirect_to  skill_post_path(@apprenticeship.post.skill, @apprenticeship.post)
+    else
+      @errors = ["You have already sent a request to this post"]
+    end
   end
 
 
@@ -14,7 +15,7 @@ before_action :authenticate_user
 
   private
   def apprenticeship_params
-    params.require(:apprenticeship).permit(:requestor_id)
+    params.require(:apprenticeship).permit(:requestor_id, :post_id , :offer)
   end
 
 end
