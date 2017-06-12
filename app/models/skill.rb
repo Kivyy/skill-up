@@ -5,25 +5,25 @@ class Skill < ApplicationRecord
   belongs_to :subcategory
   belongs_to :user
 
-<<<<<<< HEAD
-  include PgSearch
-  # multisearchable :against => [:description]
-  pg_search_scope :search, against: [:description]
+# <<<<<<< HEAD
+#   include PgSearch
+#   # multisearchable :against => [:description]
+#   pg_search_scope :search, against: [:description]
 
-  # def self.search(search)
-  #   where("LOWER(description) LIKE ? OR LOWER(title) LIKE ?","%#{search.downcase}%", "%#{search.downcase}%")
-  # end
+#   # def self.search(search)
+#   #   where("LOWER(description) LIKE ? OR LOWER(title) LIKE ?","%#{search.downcase}%", "%#{search.downcase}%")
+#   # end
   
-  def self.description_search(query)
-    if query.present?
-      search(query)
-    else
-      scope
-    end
-=======
+#   def self.description_search(query)
+#     if query.present?
+#       search(query)
+#     else
+#       scope
+#     end
+# =======
   def self.search(search, subcategory)
     where("subcategory_id = ? AND (LOWER(description) LIKE ? OR LOWER(title) LIKE ?)", subcategory.to_i, "%#{search.downcase}%", "%#{search.downcase}%")
->>>>>>> master
+# >>>>>>> master
   end
 
 end
