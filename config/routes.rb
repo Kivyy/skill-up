@@ -7,16 +7,24 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   get '/logout',  to: 'sessions#destroy'
 
-  get '/posts/new', to: 'posts#new'
   get '/posts/search', to: 'posts#index'
   post '/posts', to: 'posts#create'
 
   get 'rooms/show'
 
-  resources :skills
-  resources :apprenticeships do
-    resources :messages
+  resources :skills do
+    resources :posts , except: [:index]
   end
+
+
+  resources :posts, except: [:index] do
+    resources :apprenticeships
+  end
+
+  resources :apprenticeships do
+    resources :messages , only: [:index,:create]
+  end
+
   resources :users, except: [:index]
 
   mount ActionCable.server => '/cable'

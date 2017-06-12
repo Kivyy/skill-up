@@ -1,21 +1,20 @@
 class ApprenticeshipsController < ApplicationController
 before_action :authenticate_user
 
-  def index
-    @user = current_user
-    @users = User.all
-    @apprenticeships = Apprenticeship.all
-  end
-
   def create
-    @apprenticeship = Apprenticeship.find_or_create_by(apprenticeship_params)
+    @post = Post.find_by(post_id: params[:id])
+    byebug
+    @apprenticeship = @post.Apprenticeship.find_or_create_by(apprenticeship_params)
+
     redirect_to  apprenticeship_messages_path(@apprenticeship)
   end
 
-  private
 
+
+
+  private
   def apprenticeship_params
-  params.require(:apprenticeship).permit(:sender_id, :recipient_id)
+    params.require(:apprenticeship).permit(:requestor_id)
   end
 
 end
