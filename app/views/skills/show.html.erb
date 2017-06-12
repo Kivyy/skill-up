@@ -1,13 +1,15 @@
 <br><br><br><br><br>
 <div>
   <div>
-    <p>Skill</p>
     <p>Title: <%= @skill.title %></p>
   </div>
+  <br>
   <div>
     <% @skill.posts.each do |post|%>
       <p>Description: <%= post.description %></p>
       <p><%= link_to "Post Page", post %></p>
     <% end %>
+
+    <%= link_to "New Post", new_post_path(:skill_id => @skill.id) %>
   </div>
 </div>

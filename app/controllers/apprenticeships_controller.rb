@@ -11,11 +11,9 @@ before_action :authenticate_user
   end
 
 
-
-
   private
   def apprenticeship_params
-    params.require(:apprenticeship).permit(:requestor_id, :post_id , :offer)
+    params.require(:apprenticeship).permit(:requestor_id, :post_id, :offer)
   end
 
 end
