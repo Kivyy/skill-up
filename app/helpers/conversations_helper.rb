@@ -1,2 +1,2 @@
-module ConversationsHelper
+module ApprenticeshipsHelper
 end

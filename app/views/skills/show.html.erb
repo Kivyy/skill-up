@@ -12,7 +12,7 @@
     </div>
     <div>
       <p>
-        <%= form_for :conversation, url: '/conversations' do |f| %>
+        <%= form_for :apprenticeship, url: '/apprenticeships' do |f| %>
           <%= f.hidden_field :sender_id, :value => current_user.id %>
           <%= f.hidden_field :recipient_id, :value => @skill.user.id %>
           <%= f.submit "Connect with #{@skill.user.username}!", class: "btn btn-primary" %>

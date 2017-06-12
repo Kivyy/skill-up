@@ -119,18 +119,18 @@
 
 <div class="container">
   <h1>Requests</h1>
-  <% if @user.sender_conversations.any? %>
-    <% @user.sender_conversations.each do |c| %>
+  <% if @user.sender_apprenticeships.any? %>
+    <% @user.sender_apprenticeships.each do |c| %>
     <br>
-    <%= link_to "conversation with #{c.recipient.username}", conversation_messages_path(c) %>
+    <%= link_to "apprenticeship with #{c.recipient.username}", apprenticeship_messages_path(c) %>
     <% end %>
   <% end %>
 
   <h1>Recieved</h1>
-  <% if @user.recipient_conversations.any? %>
-    <% @user.recipient_conversations.each do |c| %>
+  <% if @user.recipient_apprenticeships.any? %>
+    <% @user.recipient_apprenticeships.each do |c| %>
     <br>
-    <%= link_to "conversation with #{c.sender.username}", conversation_messages_path(c) %>
+    <%= link_to "apprenticeship with #{c.sender.username}", apprenticeship_messages_path(c) %>
     <% end %>
   <% end %>
 </div>

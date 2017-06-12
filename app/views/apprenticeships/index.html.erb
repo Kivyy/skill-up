@@ -1,0 +1,32 @@
+<div class="ui segment">
+  <h3>Mailbox</h3>
+
+  <div class="ui list">
+    <div class="item">
+      <% @apprenticeships.each do |apprenticeship| %>
+        <% if apprenticeship.sender_id == current_user.id || apprenticeship.recipient_id == current_user.id %>
+          <% if apprenticeship.sender_id == current_user.id %>
+            <% recipient = User.find(apprenticeship.recipient_id) %>
+          <% else %>
+            <% recipient = User.find(apprenticeship.sender_id) %>
+          <% end %>
+          <%= link_to recipient.first_name, apprenticeship_messages_path(apprenticeship)%>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="ui segment">
+  <h3>All Users</h3>
+  <div class="ui list">
+    <% @users.each do |user| %>
+      <% if user.id != current_user.id %>
+      <div class="item">
+        <%= user.first_name %> <%= link_to 'Message me!', apprenticeships_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

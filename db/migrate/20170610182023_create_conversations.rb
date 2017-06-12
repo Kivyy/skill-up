@@ -1,6 +1,6 @@
-class CreateConversations < ActiveRecord::Migration[5.1]
+class CreateApprenticeship < ActiveRecord::Migration[5.1]
   def change
-    create_table :conversations do |t|
+    create_table :apprenticeships do |t|
       t.references :sender, class_name: "User"
       t.references :recipient, class_name: "User"
 
