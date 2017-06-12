@@ -1,3 +1,11 @@
+<br><br><br><br><br>
+
+<div class="container">
+  <strong><p> Apprenticeship for :  <%= @apprenticeship.post.skill.title %></p></strong>
+  <p> Subject line: <%= @apprenticeship.post.description %> </p>
+</div>
+
+
 <% if @over_ten %>
    <%= link_to 'Show Previous', '?m=all' %>
 <% end %>

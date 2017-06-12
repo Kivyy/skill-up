@@ -4,7 +4,7 @@ class Message < ApplicationRecord
   has_one :recipient, through: :apprenticeship, source: :recipient
 
   validates_presence_of :body, :apprenticeship_id
-
+  belongs_to :user
 
   # def message_time
   # created_at.strftime(“%m/%d/%y at %l:%M %p”)
