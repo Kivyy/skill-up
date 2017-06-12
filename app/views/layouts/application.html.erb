@@ -33,6 +33,13 @@
                 <li><%= link_to "Login",   '/login' ,class: "navbar-li"%></li>
               <% end %>
             </ul>
+            <div>
+              <%= form_tag posts_search_path, method: "get" do %>
+              <%= label_tag(:query, "Search for a skill...")%>
+              <%= text_field_tag(:query)%>
+              <%= submit_tag("Search")%>
+              <% end %>
+            </div>
           </nav>
         </div>
     </div>
