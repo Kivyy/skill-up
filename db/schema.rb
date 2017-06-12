@@ -10,24 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170611194513) do
+ActiveRecord::Schema.define(version: 20170612161600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "apprenticeships", force: :cascade do |t|
-    t.bigint "sender_id"
-    t.bigint "recipient_id"
+    t.bigint "requestor_id"
+    t.bigint "post_id", null: false
+    t.boolean "accepted", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["recipient_id"], name: "index_apprenticeships_on_recipient_id"
-    t.index ["sender_id"], name: "index_apprenticeships_on_sender_id"
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.string "title", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_apprenticeships_on_post_id"
+    t.index ["requestor_id"], name: "index_apprenticeships_on_requestor_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -50,25 +45,22 @@ ActiveRecord::Schema.define(version: 20170611194513) do
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
   end
 
-  create_table "skills", force: :cascade do |t|
-    t.bigint "subcategory_id", null: false
-    t.bigint "user_id", null: false
-    t.string "title", null: false
+  create_table "postings", force: :cascade do |t|
+    t.bigint "skill_id", null: false
+    t.bigint "creator_id", null: false
     t.text "description", null: false
     t.boolean "teach", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["subcategory_id"], name: "index_skills_on_subcategory_id"
-    t.index ["user_id"], name: "index_skills_on_user_id"
+    t.index ["creator_id"], name: "index_postings_on_creator_id"
+    t.index ["skill_id"], name: "index_postings_on_skill_id"
   end
 
-  create_table "subcategories", force: :cascade do |t|
+  create_table "skills", force: :cascade do |t|
     t.string "title", null: false
-    t.string "img_url"
-    t.bigint "category_id", null: false
+    t.string "category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_subcategories_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,7 +73,7 @@ ActiveRecord::Schema.define(version: 20170611194513) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "skills", "subcategories"
-  add_foreign_key "skills", "users"
-  add_foreign_key "subcategories", "categories"
+  add_foreign_key "messages", "apprenticeships"
+  add_foreign_key "messages", "users"
+  add_foreign_key "postings", "skills"
 end
