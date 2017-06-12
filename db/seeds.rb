@@ -41,5 +41,6 @@ subcategories = Subcategory.all
 booleans = [true, false]
 
 40.times do
-  Skill.create(user: users.sample, subcategory: subcategories.sample , title: (subcategories.sample).title, description: Faker::Hacker.say_something_smart, teach: booleans.sample)
+  scategory = subcategories.sample
+  Skill.create(user: users.sample, subcategory: scategory , title: scategory.title, description: Faker::Hacker.say_something_smart, teach: booleans.sample)
 end
