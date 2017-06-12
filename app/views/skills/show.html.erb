@@ -1,0 +1,13 @@
+<br><br><br><br><br>
+<div>
+  <div>
+    <p>Skill</p>
+    <p>Title: <%= @skill.title %></p>
+  </div>
+  <div>
+    <% @skill.posts.each do |post|%>
+      <p>Description: <%= post.description %></p>
+      <p><%= link_to "Post Page", post %></p>
+    <% end %>
+  </div>
+</div>

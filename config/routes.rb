@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/posts/search', to: 'posts#index'
   post '/posts', to: 'posts#create'
 
+  resources :posts
+
   get 'rooms/show'
 
   resources :skills do
