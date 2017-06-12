@@ -12,8 +12,24 @@
 <div>
   <p>
     <%= form_for :apprenticeship, url: '/apprenticeships' do |f| %>
+      <%= f.label "Offer: "%>
+      <%= f.text_field :offer %>
       <%= f.hidden_field :requestor_id, :value => current_user.id %>
+      <%= f.hidden_field :post_id, :value => @post.id %>
       <%= f.submit "Send a request to #{@post.creator.username}!", class: "btn btn-primary" %>
     <% end %>
   </p>
+</div>
+
+<div><br>
+  <% if @post.apprenticeships.any? %>
+  <% if @post.creator == current_user %>
+  <h4> Current offer: </h4>
+  <ul>
+    <% @post.apprenticeships.each do |app| %>
+    <li><p><%= app.offer %> - <strong><%= app.requestor.full_name %></strong></p></li>
+    <% end %>
+    <ul>
+    <% end %>
+  <% end %>
 </div>
