@@ -52,20 +52,21 @@
 </div>
 <br>
 
-<div class="container">
-  <h1>Requests</h1>
-  <% if @user.apprenticeships.any? %>
-    <% @user.apprenticeships.each do |c| %>
-    <br>
-    <%= link_to "apprenticeship with #{c.recipient.username}", apprenticeship_messages_path(c) %>
-    <% end %>
-  <% end %>
 
-  <h1>Recieved</h1>
-  <% if @user.apprenticeships.any? %>
-    <% @user.apprenticeships.each do |c| %>
-    <br>
-    <%= link_to "apprenticeship with #{c.sender.username}", apprenticeship_messages_path(c) %>
+<div class="add-skill">
+  <% if current_user.id === @user.id %>
+    <h2>Add Skill</h2>
+    <%= form_for @skill do |f| %>
+
+        <%= f.label :category %>
+        <%= f.select :category, ['Sports', 'Music', 'Cooking', 'Home', 'Education', 'Programming', 'Fitness']%>
+        <br>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <br>
+      <%= f.submit "Add Skill", class: "btn btn-primary" %>
     <% end %>
   <% end %>
+  <br><br>
+
 </div>
