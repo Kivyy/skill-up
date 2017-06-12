@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates :first_name, :last_name, :birthdate, :presence => true
+  validates :first_name, :last_name, :presence => true
   validates :username, :email, :presence => true, :uniqueness => true
 
   has_many :skills
