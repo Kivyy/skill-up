@@ -1,14 +1,16 @@
 <div>
   <div>
-    <p>Subcategory</p>
-    <p><%= @skill.subcategory.title %></p>
+    <p>Skill</p>
+    <p><%= @skill.title %></p>
   </div>
   <div>
-    <p><%= @skill.description %></p>
+    <%= @skill.posts.each do |post|%>
+      <p><%= post.description %></p>
+      <p><%= link_to "See #{post.user.username}'s full profile", post.user %></p>
+    <% end %>
   </div>
   <div>
     <div>
-      <p><%= link_to "See #{@skill.user.username}'s full profile", @skill.user %></p>
     </div>
     <div>
       <p>
