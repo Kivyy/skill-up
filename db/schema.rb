@@ -21,13 +21,22 @@ ActiveRecord::Schema.define(version: 20170611194513) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "apprenticeships", force: :cascade do |t|
+=======
+  create_table "conversations", force: :cascade do |t|
+>>>>>>> master
     t.bigint "sender_id"
     t.bigint "recipient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.index ["recipient_id"], name: "index_apprenticeships_on_recipient_id"
     t.index ["sender_id"], name: "index_apprenticeships_on_sender_id"
+=======
+    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
+    t.index ["sender_id"], name: "index_conversations_on_sender_id"
+>>>>>>> master
   end
 
   create_table "messages", force: :cascade do |t|
@@ -64,6 +73,7 @@ ActiveRecord::Schema.define(version: 20170611194513) do
 
   create_table "subcategories", force: :cascade do |t|
     t.string "title", null: false
+    t.string "img_url"
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

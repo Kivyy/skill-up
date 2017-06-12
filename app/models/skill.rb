@@ -16,9 +16,12 @@ class Skill < ApplicationRecord
       scope
     end
   end
-  
+
   def self.search(search, subcategory)
     where("subLcategory_id = ? AND (LOWER(description) LIKE ? OR LOWER(title) LIKE ?)", subcategory.to_i, "%#{search.downcase}%", "%#{search.downcase}%")
+  end
+  def self.search(search, subcategory)
+    where("subcategory_id = ? AND (LOWER(description) LIKE ? OR LOWER(title) LIKE ?)", subcategory.to_i, "%#{search.downcase}%", "%#{search.downcase}%")
   end
 
 end
