@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'rooms/show'
 
   resources :skills do
-    resources :posts , except: [:index]
+    resources :posts
   end
 
 
