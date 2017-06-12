@@ -3,11 +3,8 @@ class SkillsController < ApplicationController
   def index
     @skills = Skill.all
     if params[:search]
-<<<<<<< HEAD
-      @skills = Skill.description_search(params[:search]).order("created_at DESC")
-=======
+
       @skills = Skill.search(params[:search], params[:subcategory]).order("created_at DESC")
->>>>>>> master
     else
       @skills = Skill.all.order("created_at DESC")
     end
