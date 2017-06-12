@@ -7,11 +7,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   get '/logout',  to: 'sessions#destroy'
 
-
   get '/posts/search', to: 'posts#index'
   post '/posts', to: 'posts#create'
-
-  resources :posts
 
   get 'rooms/show'
 
