@@ -32,14 +32,6 @@
                 <li><%= link_to "Register", new_user_path ,class: "navbar-li"%></li>
                 <li><%= link_to "Login",   '/login' ,class: "navbar-li"%></li>
               <% end %>
-              <li id="search-form">
-                <%= form_tag skills_search_path, :method => 'get', :class => 'form-inline' do %><br>
-                    <% @subcategories = get_var %>
-                    <%= select_tag "subcategory", options_from_collection_for_select(@subcategories, "id", "title") %>
-                    <%= text_field_tag :search, params[:search], :class => 'form-control mr-sm-2' %>
-                    <%= submit_tag "Search", :name => nil, class: "btn btn-default", :class => 'btn btn-outline-success my-2 my-sm-0' %>
-                <% end %>
-              </li>
             </ul>
           </nav>
         </div>
