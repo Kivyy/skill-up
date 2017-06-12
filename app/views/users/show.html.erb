@@ -41,11 +41,11 @@
       </thead>
       <tbody>
 
-        <% @user.skills.each do |skill| %>
-          <% if skill.teach %>
+        <% @user.posts.each do |post| %>
+          <% if post.teach %>
           <tr>
-            <td><%= skill.title %></td>
-            <td><%= skill.description %></td>
+            <td><%= post.skill.title %></td>
+            <td><%= post.description %></td>
           </tr>
           <% end %>
         <% end %>
@@ -66,11 +66,11 @@
     </thead>
     <tbody>
 
-      <% @user.skills.each do |skill| %>
-        <% if skill.teach === false %>
+      <% @user.posts.each do |post| %>
+        <% if post.teach === false %>
         <tr>
-          <td><%= skill.title %></td>
-          <td><%= skill.description %></td>
+          <td><%= post.skill.title %></td>
+          <td><%= post.description %></td>
         </tr>
         <% end %>
       <% end %>
@@ -85,32 +85,13 @@
   <% if current_user.id === @user.id %>
     <h2>Add Skill</h2>
     <%= form_for @skill do |f| %>
-      <%= f.label :title %>
-      <br>
-      <br>
-      <%= f.text_field :title %>
-      <br>
-      <br>
-      <label for="purpose">&nbsp;Purpose:</label>
-      <%= f.select (:teach), class: "custom-select" do %>
-        <% [['teach', true],['learn',false]].each do |c| %>
-          <%= content_tag(:option, c.first, value: c.last) %>
-        <% end %>
-      <% end %>
-      <br>
-      <br>
-      <label for="subcategory">&nbsp;Subcategory:</label>
-      <%= f.select (:subcategory_id) do %>
-        <% @subcategories.each do |subcategory| %>
-          <%= content_tag(:option, subcategory.title, value: subcategory.id) %>
-        <% end %>
-      <% end %>
-      <div>
-      <%= f.label :description %>
-      <br>
-      <br>
-      <%= f.text_area :description %>
-      </div>
+
+        <%= f.label :category %>
+        <%= f.text_field :category %>
+        <br>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <br>
       <%= f.submit "Add Skill", class: "btn btn-primary" %>
     <% end %>
   <% end %>
@@ -119,16 +100,16 @@
 
 <div class="container">
   <h1>Requests</h1>
-  <% if @user.sender_apprenticeships.any? %>
-    <% @user.sender_apprenticeships.each do |c| %>
+  <% if @user.apprenticeships.any? %>
+    <% @user.apprenticeships.each do |c| %>
     <br>
     <%= link_to "apprenticeship with #{c.recipient.username}", apprenticeship_messages_path(c) %>
     <% end %>
   <% end %>
 
   <h1>Recieved</h1>
-  <% if @user.recipient_apprenticeships.any? %>
-    <% @user.recipient_apprenticeships.each do |c| %>
+  <% if @user.apprenticeships.any? %>
+    <% @user.apprenticeships.each do |c| %>
     <br>
     <%= link_to "apprenticeship with #{c.sender.username}", apprenticeship_messages_path(c) %>
     <% end %>

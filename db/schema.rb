@@ -45,15 +45,15 @@ ActiveRecord::Schema.define(version: 20170612161600) do
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
   end
 
-  create_table "postings", force: :cascade do |t|
-    t.bigint "skill_id", null: false
-    t.bigint "creator_id", null: false
+  create_table "posts", force: :cascade do |t|
+    t.bigint "skill_id"
+    t.bigint "creator_id"
     t.text "description", null: false
-    t.boolean "teach", default: true, null: false
+    t.boolean "teach", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["creator_id"], name: "index_postings_on_creator_id"
-    t.index ["skill_id"], name: "index_postings_on_skill_id"
+    t.index ["creator_id"], name: "index_posts_on_creator_id"
+    t.index ["skill_id"], name: "index_posts_on_skill_id"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -75,5 +75,5 @@ ActiveRecord::Schema.define(version: 20170612161600) do
 
   add_foreign_key "messages", "apprenticeships"
   add_foreign_key "messages", "users"
-  add_foreign_key "postings", "skills"
+  add_foreign_key "posts", "skills"
 end
