@@ -87,7 +87,7 @@
     <%= form_for @skill do |f| %>
 
         <%= f.label :category %>
-        <%= f.text_field :category %>
+        <%= f.select :category, ['Sports', 'Music', 'Cooking', 'Home', 'Education', 'Programming', 'Fitness']%>
         <br>
         <%= f.label :title %>
         <%= f.text_field :title %>
