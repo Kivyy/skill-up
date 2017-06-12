@@ -1,0 +1,19 @@
+<br><br><br><br><br><br>
+<div>
+  <p><%= @post.description %></p>
+  <p> Poster: <%= @post.creator.full_name %> </p>
+</div>
+
+<div>
+  <%= link_to 'User Profile',  user_path(@post.creator) %>
+</div>
+
+
+<div>
+  <p>
+    <%= form_for :apprenticeship, url: '/apprenticeships' do |f| %>
+      <%= f.hidden_field :requestor_id, :value => current_user.id %>
+      <%= f.submit "Send a request to #{@post.creator.username}!", class: "btn btn-primary" %>
+    <% end %>
+  </p>
+</div>
