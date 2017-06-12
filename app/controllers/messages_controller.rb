@@ -5,6 +5,8 @@ class MessagesController < ApplicationController
 
 
   def index
+    puts @apprenticeship.accepted
+    puts "*" * 100
     @apprenticeship.update_attributes(accepted: true)
     @messages = @apprenticeship.messages
     if @messages.length > 10
