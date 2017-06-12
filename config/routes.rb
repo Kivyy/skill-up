@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
 
   get '/posts/search', to: 'posts#index'
-  post '/pots', to: 'posts#create'
+  post '/posts', to: 'posts#create'
 
   get 'rooms/show'
 

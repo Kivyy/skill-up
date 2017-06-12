@@ -4,7 +4,8 @@ class User < ApplicationRecord
 
   has_many :posts, :foreign_key => :creator_id
   has_many :apprenticeships, :foreign_key => :requestor_id
-
+  has_many :skills, through: :posts
+  
   has_secure_password
 
   def full_name

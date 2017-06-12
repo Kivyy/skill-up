@@ -9,8 +9,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @skill = Skill.new
-    @subcategories = Subcategory.all
-
   end
 
   def create
