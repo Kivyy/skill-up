@@ -2,6 +2,14 @@ class SkillsController < ApplicationController
   include SessionsHelper
   def index
     @skills = Skill.all
+    @tech = Skill.select {|skill| skill.category == "Technology"}
+    @cook = Skill.select {|skill| skill.category == "Cooking"}
+    @edu = Skill.select {|skill| skill.category == "Education"}
+    @fit = Skill.select {|skill| skill.category == "Fitness"}
+    @sport = Skill.select {|skill| skill.category == "Sports"}
+    @music = Skill.select {|skill| skill.category == "Music"}
+
+
     if params[:search]
       @skills = Skill.search(params[:search], params[:subcategory]).order("created_at DESC")
     else
