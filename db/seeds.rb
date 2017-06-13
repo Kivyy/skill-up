@@ -6,7 +6,6 @@ user3 = User.create(first_name: "carlos", last_name: "joe", username: "carlos", 
 user4 = User.create(first_name: "alex", last_name: "joe", username: "alex", email: "alex@gmail.com", password: "password")
 user5 = User.create(first_name: "jason", last_name: "joe", username: "jason", email: "jason@gmail.com", password: "password")
 user6 = User.create(first_name: "tom", last_name: "joe", username: "tom", email: "tom@gmail.com", password: "password")
-skill = Skill.create(title: "test", category: "testing")
 # post = skill.
 # user.apprenticeships.create(requestor_id: 1, post_id: 1)
 
@@ -81,12 +80,12 @@ end
 # So arid against the shadows
 # You battle wanting eyes beside the wind")
 # Post.create(skill_id: 23, creator_id: 3, description: "Alass! The Queen will vanish
-# unsure restless 
-# a long way from home 
-# no way out 
-# Down what streets 
-# the lover 
-# turn aside 
+# unsure restless
+# a long way from home
+# no way out
+# Down what streets
+# the lover
+# turn aside
 # when the world was new")
 # Post.create(skill_id: 13, creator_id: 4, description: "Strangely poisonous before the mud
 # We smear electric weirdness within the air
@@ -97,16 +96,12 @@ end
 # I am blue below the bullshit
 # I dream of lustful meaning about the air
 # We Reach! The day is no more
-# clouded unsafe 
+# clouded unsafe
 # fading slowly ")
-# Post.create(skill_id: 12, creator_id: 5, description: "a phone ringing somewhere 
-# From which dreams 
-# such a man 
+# Post.create(skill_id: 12, creator_id: 5, description: "a phone ringing somewhere
+# From which dreams
+# such a man
 
 # ")
-# Post.create(skill_id: 28, creator_id: 6, description: "seek shelter 
+# Post.create(skill_id: 28, creator_id: 6, description: "seek shelter
 # never knowing how")
-
-
-
-
