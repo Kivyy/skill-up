@@ -54,13 +54,54 @@
 
 <div class="container-fluid bg-3 text-center" id="category-div">
   <div class="row">
-      <% @skill.each_slice(4) do |slice| %>
-      <% slice.each do |skill| %>
-        <div class="col-sm-3">
-          <h3><%= skill.title %></h3>
-        </div>
-          <% end %>
+      <div class="col-xs-2">
+      <h2>Music</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Music" %>
+          <h4><%= skill.title %></h4>
         <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Sports</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Sports" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Fitness</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Fitness" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Education</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Education" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Cooking</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Cooking" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Technology</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Technology" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>
