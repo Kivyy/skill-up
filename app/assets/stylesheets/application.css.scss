@@ -16,18 +16,25 @@
 
  #logo {
   float: left;
-  margin-right: 10px;
   font-size: 3em;
-  color: gray;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 40px;
   font-weight: bold;
+  padding-top: 2.5%;
+}
+
+.nav-link {
+  margin-left: 5%;
+}
+
+.search-bar {
+  float: right;
 }
 
 .navbar-inner {
     background-color: #80edd9;
-    border-bottom: thin solid grey;
+    border-bottom: thin solid transparent;
     font-family: 'Bungee', cursive;
 }
 
