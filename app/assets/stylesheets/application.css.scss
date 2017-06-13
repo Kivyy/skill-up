@@ -36,7 +36,12 @@
     background-color: #80edd9;
     border-bottom: thin solid transparent;
     font-family: 'Bungee', cursive;
+    text-align: center;
+    z-index:999;
+    position: fixed;
+    padding: 0;
 }
+
 
 .navbar-li {
  color: white;
