@@ -1,5 +1,5 @@
 <br><br><br><br><br>
-<%= @apprenticeship.accepted %>
+
 
 <div class="container">
   <strong><p> Apprenticeship for :  <%= @apprenticeship.post.skill.title %></p></strong>
@@ -30,7 +30,7 @@
     </div><br>
 
     <div>
-      <%= f.submit "Add Reply", class: "btn btn-primary chat-submit"  %>
+      <input class="btn btn-primary chat-submit" type="submit" value="Add reply">
     </div>
 
   <% end %>
