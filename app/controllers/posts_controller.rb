@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   include SessionsHelper
 
+  def index
+    @posts = Post.description_search(params[:query])
+  end
+
   def show
     @post = Post.find_by(id: params[:id])
   end
