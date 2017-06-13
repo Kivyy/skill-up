@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  $("#new_message").on("submit", function(event) {
+  $("body").on("submit", "#new_message", function(event) {
     event.preventDefault();
     let $that = $(this)
     let url = $(this).attr("action")
