@@ -54,17 +54,17 @@
 
 <div class="container-fluid bg-3 text-center" id="category-div">
   <div class="row">
-    <div class="col-sm-3">
-      <p> Music </p>
-    </div>
-    <div class="col-sm-3">
-      <p> Sports </p>
-    </div>
-    <div class="col-sm-3">
-      <p> Languages </p>
-    </div>
-    <div class="col-sm-3">
-      <p> Education </p>
+      <% @skill.each_slice(4) do |slice| %>
+      <% slice.each do |skill| %>
+        <div class="col-sm-3">
+          <h3><%= skill.title %></h3>
+        </div>
+          <% end %>
+        <% end %>
     </div>
   </div>
-</div><br>
+</div>
+
+<nav class="navbar fixed-bottom navbar-light bg-faded">
+  <a class="navbar-brand" href="#">Fixed bottom</a>
+</nav>
