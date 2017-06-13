@@ -2,11 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.firstdiv {
-  background-color: #80edd9;
-  height:600px;
-  color: white;
-   }
+// #maincontent {
+//   background-color: #800080;
+//   height:600px;
+//   color: white;
+//    }
 
 
 
@@ -58,13 +58,14 @@ padding: 1%
 #category-div {
   padding-top: 15px;
   height: 400px;
-  background-color: #80edd9;
-  color: grey;
+  background-color: #009999;
+  color: white;
 }
 
 header {
   text-align: center;
-  background: #80edd9;
+  background: #009999
+;
   color: white;
 }
 header .container {
