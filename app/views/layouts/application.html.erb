@@ -4,8 +4,9 @@
     <title>SkillUp</title>
     <%= csrf_meta_tags %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -18,37 +19,46 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <div class="navbar transparent navbar-fixed-top navbar-inverse navbar-inner">
-        <div class="container">
-          <%= link_to "Skill Up", '/', id: "logo" %>
-          <nav>
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Home",   '/' ,class: "navbar-li"%></li>
-              <% if logged_in? %>
-                <li><%= link_to "Profile", @user, class: "navbar-li" %></li>
-                <li><%= link_to "Logout",   '/logout' ,class: "navbar-li"%></li>
-              <% else %>
-                <li><%= link_to "Register", new_user_path ,class: "navbar-li"%></li>
-                <li><%= link_to "Login",   '/login' ,class: "navbar-li"%></li>
-              <% end %>
-            </ul>
-            <div>
-              <%= form_tag posts_search_path, method: "get" do %>
-              <div>
-                <%= text_field_tag(:query) %>
-              </div>
-              <%= submit_tag("Search")%>
-              <% end %>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inner" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    </button>
+                    <%= link_to "Skill Up", '/', id: "logo" %>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav nav-link">
+                      <% if logged_in? %>
+                        <li>
+                          <%= link_to "Profile", @user, class: "navbar-li" %>
+                        </li>
+                        <li>
+                            <%= link_to "Logout",   '/logout' ,class: "navbar-li"%>
+                        </li>
+                        <% else %>
+                        <li>
+                            <%= link_to "Register", new_user_path ,class: "navbar-li"%>
+                        </li>
+                        <li>
+                          <%= link_to "Login",   '/login' ,class: "navbar-li"%>
+                        </li>
+                        <% end %>
+
+
+                    </ul>
+                    <div class="pull-right search-bar">
+                      <%= form_tag posts_search_path, method: "get" do %>
+                      <%= text_field_tag(:query) %>
+                      <%= submit_tag("Search")%>
+                      <% end %>
+                    </div>
+                </div>
             </div>
-          </nav>
-        </div>
-    </div>
+        </nav>
     <br>
-    <br><br><br>
-
     <%= yield %>
-
   </body>
 
 </html>
