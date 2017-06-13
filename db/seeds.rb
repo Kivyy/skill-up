@@ -6,9 +6,6 @@ user3 = User.create(first_name: "carlos", last_name: "joe", username: "carlos", 
 user4 = User.create(first_name: "alex", last_name: "joe", username: "alex", email: "alex@gmail.com", password: "password")
 user5 = User.create(first_name: "jason", last_name: "joe", username: "jason", email: "jason@gmail.com", password: "password")
 user6 = User.create(first_name: "tom", last_name: "joe", username: "tom", email: "tom@gmail.com", password: "password")
-skill = Skill.create(title: "test", category: "testing")
-# post = skill.
-# user.apprenticeships.create(requestor_id: 1, post_id: 1)
 
 Skill.create(title: "String", category: "Music", img_url: "https://images.pexels.com/photos/111287/pexels-photo-111287.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Brass", category: "Music", img_url: "https://images.pexels.com/photos/45243/saxophone-music-gold-gloss-45243.jpeg?h=350&auto=compress&cs=tinysrgb")
@@ -58,55 +55,10 @@ Skill.create(title: "Big Data", category: "Technology", img_url: "https://images
 Skill.create(title: "Other", category: "Technology", img_url: "https://images.pexels.com/photos/90807/pexels-photo-90807.jpeg?h=350&auto=compress&cs=tinysrgb")
 
 
-40.times do
-Post.create(skill_id: rand(1...4), creator_id: rand(1...3), description: Faker::Music.instrument)
-end
 
-# 40.times do
-# Post.create(skill_id: rand(1...10), creator_id: rand(1...6), description: Faker::Dessert.variety)
-# end
-
-# Post.create(skill_id: 1, creator_id: 1, description: "Holding the instrument")
-# Post.create(skill_id: 2, creator_id: 2, description: "Press the buttons")
-# Post.create(skill_id: 3, creator_id: 3, description: "Piccolo")
-# Post.create(skill_id: 4, creator_id: 4, description: "Pressing Keys")
-# Post.create(skill_id: 15, creator_id: 5, description: "Running")
-# Post.create(skill_id: 24, creator_id: 6, description: "It's a secret")
-# Post.create(skill_id: 16, creator_id: 1, description: "Sinister and blue near the vapors
-# I stroke quaking thoughts among the light
-# Awaken! The vision keeps going
-# So mournful over the rain")
-# Post.create(skill_id: 19, creator_id: 2, description: "You transform numb tomb stones beneath the towers
-# Be transparent. The lust keeps going
-# So arid against the shadows
-# You battle wanting eyes beside the wind")
-# Post.create(skill_id: 23, creator_id: 3, description: "Alass! The Queen will vanish
-# unsure restless 
-# a long way from home 
-# no way out 
-# Down what streets 
-# the lover 
-# turn aside 
-# when the world was new")
-# Post.create(skill_id: 13, creator_id: 4, description: "Strangely poisonous before the mud
-# We smear electric weirdness within the air
-# Be watchful. The twilight is good
-# We are transparent beyond the land
-# We ensnare flying knives within the air
-# Atone! The demon will come again
-# I am blue below the bullshit
-# I dream of lustful meaning about the air
-# We Reach! The day is no more
-# clouded unsafe 
-# fading slowly ")
-# Post.create(skill_id: 12, creator_id: 5, description: "a phone ringing somewhere 
-# From which dreams 
-# such a man 
-
-# ")
-# Post.create(skill_id: 28, creator_id: 6, description: "seek shelter 
-# never knowing how")
-
-
-
-
+user3.posts.create(skill_id: 1, description: "Grad student from Berklee College of music, proficient in Classical Guitar. Available during the weekends!")
+user3.posts.create(skill_id: 3, description: "I have ghostwritten music for local singers, and I'm currently recording my own guitar solo album")
+user3.posts.create(skill_id: 29, description: "Originally from Mexico, I have been taught how to cook fantastic South American cusine ranging from Mexico to Argentina")
+user3.posts.create(skill_id: 28, description: "Learned how to cook asian dishes during my time spent in Japan")
+user3.posts.create(skill_id: 23, description: "Have been tutoring for the past year, extensive knowledge in strategies to succeed in SAT's")
+user3.posts.create(skill_id: 25, description: "Graduated fomr DBC, able to teach Ruby/Rails and Javascript")
