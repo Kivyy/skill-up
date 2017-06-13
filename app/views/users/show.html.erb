@@ -78,14 +78,13 @@
 
   <table class="table">
     <h2>Requests</h2>
-    <% @user.posts.each do |post| %>
         <% @requests.each do |a| %>
         <tr>
           <td>Offer: <%= a.offer %></td>
           <br>
           <td>
             Post Owner: <%= a.post.creator.username %></td>
-          <td><%= link_to "Post Page", post_path(post) %></td>
+          <td><%= link_to "Post Page", post_path(a.post) %></td>
           <br>
           <td>Status:
            <% if a.accepted == false %>
@@ -96,7 +95,6 @@
          </td>
         </tr>
         <% end %>
-    <% end %>
   </table>
 
 <div class="add-skill">
