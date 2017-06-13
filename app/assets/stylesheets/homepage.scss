@@ -114,3 +114,21 @@ hr.star-primary:after {
   background-color: white;
   color: #2C3E50;
 }
+
+
+// footer
+footer{
+    background-color: #424558;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    text-align: center;
+    color: #CCC;
+}
+
+footer p {
+    padding: 25px;
+    margin: 0px;
+    line-height: 100%;
+}
