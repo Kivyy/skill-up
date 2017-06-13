@@ -54,10 +54,6 @@ Skill.create(title: "Other", category: "Technology", img_url: "https://images.pe
 
 user5.posts.create(skill_id: 13, description: "Attained my blackbelt at the age of 13, my hands are lethal")
 
-40.times do
-Post.create(skill_id: rand(1...4), creator_id: rand(1...3), description: Faker::Music.instrument)
-end
-
 user4.skills.create(skill_id: 18, description: "I've been running on and off for about 15 years. My longest run has been a little over 8 miles but my usual distance is around 3 miles. My average pace is a 8:30 mile. I practice proper form and would love to teach you in exchange for some sweet skills!")
 user4.skills.create(skill_id: 14, description: "I've been running on and off for about 15 years. My longest run has been a little over 8 miles but my usual distance is around 3 miles. My average pace is a 8:30 mile. I practice proper form and would love to teach you in exchange for some sweet skills! I'm not an olympian or anything but I'm sure I can improve your run skills.")
 user4.skills.create(skill_id: 9, description: "What will I do next? Who knows! That's how good I am at improvisation. Now, I can't promise that I'll be funny but I can promise I will make everything very awkward and probably asked politely to leave.")
