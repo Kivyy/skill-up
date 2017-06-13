@@ -44,6 +44,7 @@
           <tr>
             <td><%= post.skill.title %></td>
             <td><%= post.description %></td>
+            <td><%= link_to "Post Page", post_path(post) %></td>
           </tr>
         <% end %>
       </tbody>
@@ -51,6 +52,51 @@
   </div>
 </div>
 
+  <table class="table">
+    <h2>Connections</h2>
+    <% @user.posts.each do |post| %>
+        <% post.apprenticeships.each do |a| %>
+        <tr>
+          <td>Offer: <%= a.offer %></td>
+          <br>
+          <td>Requestor: <%= a.requestor.username %></td>
+          <td><%= link_to "Post Page", post_path(post) %></td>
+          <br>
+          <td>Status:
+           <% if a.accepted == false %>
+           <p>In Progess</p>
+            <% else %>
+            <p>Accepted</p>
+            <% end %>
+         </td>
+        </tr>
+        <% end %>
+    <% end %>
+  </table>
+
+
+  <table class="table">
+    <h2>Requests</h2>
+    <% @user.posts.each do |post| %>
+        <% @requests.each do |a| %>
+        <tr>
+          <td>Offer: <%= a.offer %></td>
+          <br>
+          <td>
+            Post Owner: <%= a.post.creator.username %></td>
+          <td><%= link_to "Post Page", post_path(post) %></td>
+          <br>
+          <td>Status:
+           <% if a.accepted == false %>
+           <p>In Progess</p>
+            <% else %>
+            <p>Accepted</p>
+            <% end %>
+         </td>
+        </tr>
+        <% end %>
+    <% end %>
+  </table>
 
 <div class="add-skill">
   <% if current_user.id === @user.id %>

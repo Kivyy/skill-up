@@ -32,7 +32,7 @@
                     <ul class="nav navbar-nav nav-link">
                       <% if logged_in? %>
                         <li>
-                          <%= link_to "Profile", @user, class: "navbar-li" %>
+                          <%= link_to "Profile", current_user, class: "navbar-li" %>
                         </li>
                         <li>
                             <%= link_to "Logout",   '/logout' ,class: "navbar-li"%>
@@ -46,7 +46,6 @@
                         </li>
                         <% end %>
 
-
                     </ul>
                     <div class="pull-right search-bar">
                       <%= form_tag posts_search_path, method: "get" do %>
@@ -58,6 +57,8 @@
             </div>
         </nav>
     <br>
+    <br>
+    <br><br><br><br>
     <%= yield %>
   </body>
 
