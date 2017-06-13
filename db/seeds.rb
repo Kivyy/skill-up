@@ -1,5 +1,3 @@
-
-
 user1 = User.create(first_name: "joe", last_name: "joe", username: "joe", email: "joe@gmail.com", password: "password")
 user2 = User.create(first_name: "kiv", last_name: "joe", username: "kiv", email: "kiv@gmail.com", password: "password")
 user3 = User.create(first_name: "carlos", last_name: "joe", username: "carlos", email: "carlos@gmail.com", password: "password")
@@ -54,6 +52,7 @@ Skill.create(title: "UI/UX", category: "Technology", img_url: "https://images.pe
 Skill.create(title: "Big Data", category: "Technology", img_url: "https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Other", category: "Technology", img_url: "https://images.pexels.com/photos/90807/pexels-photo-90807.jpeg?h=350&auto=compress&cs=tinysrgb")
 
+user5.posts.create(skill_id: 13, description: "Attained my blackbelt at the age of 13, my hands are lethal")
 
 40.times do
 Post.create(skill_id: rand(1...4), creator_id: rand(1...3), description: Faker::Music.instrument)
@@ -65,3 +64,10 @@ user4.skills.create(skill_id: 9, description: "What will I do next? Who knows! T
 user4.skills.create(skill_id: 3, description: "If you're looking to learn how to play the clarinet, I'm your guy! Let me teach you the difference between a C flat and a B sharp so that you can BE SHARP. Ehhhh, haha. Jk, but really. Lemme teach you and offer me something cool to learn in return. Let's hook up!")
 user4.skills.create(skill_id: 16, description: "I'm pretty decent at basketball. Not so much the scoring or the passing or the dribbling but I'm pretty good at the part where you sweat all day and feel like your lungs are about to explode. If that sounds like your cup of tea, hit me up and let's swap some skills!")
 user4.skills.create(skill_id: 5, description: "Yo, I'm the Elton John of Bushwick. Let me have the chance to teach you Tiny Dancer but in a way that no one has heard of before so that you can keep your street cred. Throw me some skills you can barter with and I'll think about it. I'm always looking for new ways to validate how unique I am and not like every other hipster in the 'shwick. Looking forward to hearing for you or whatever.")
+
+user3.posts.create(skill_id: 1, description: "Grad student from Berklee College of music, proficient in Classical Guitar. Available during the weekends!")
+user3.posts.create(skill_id: 3, description: "I have ghostwritten music for local singers, and I'm currently recording my own guitar solo album")
+user3.posts.create(skill_id: 29, description: "Originally from Mexico, I have been taught how to cook fantastic South American cusine ranging from Mexico to Argentina")
+user3.posts.create(skill_id: 28, description: "Learned how to cook asian dishes during my time spent in Japan")
+user3.posts.create(skill_id: 23, description: "Have been tutoring for the past year, extensive knowledge in strategies to succeed in SAT's")
+user3.posts.create(skill_id: 25, description: "Graduated fomr DBC, able to teach Ruby/Rails and Javascript")
