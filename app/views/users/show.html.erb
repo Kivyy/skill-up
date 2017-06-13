@@ -50,19 +50,16 @@
     </table>
   </div>
 </div>
-<br>
 
 
 <div class="add-skill">
   <% if current_user.id === @user.id %>
     <h2>Add Skill</h2>
-    <%= form_for @skill do |f| %>
-
-        <%= f.label :category %>
-        <%= f.select :category, ['Sports', 'Music', 'Cooking', 'Home', 'Education', 'Programming', 'Fitness']%>
-        <br>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
+    <%= form_for Post.new do |f| %>
+        <%= f.label :skill %>
+         <%= f.collection_select(:skill_id, Skill.all, :id, :title) %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
         <br>
       <%= f.submit "Add Skill", class: "btn btn-primary" %>
     <% end %>

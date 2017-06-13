@@ -16,19 +16,28 @@
 
  #logo {
   float: left;
-  margin-right: 10px;
   font-size: 3em;
-  color: gray;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 40px;
   font-weight: bold;
+  padding-top: 2.5%;
+}
+
+.nav-link {
+  margin-left: 5%;
+}
+
+.search-bar {
+  float: right;
 }
 
 .navbar-inner {
     background-color: #80edd9;
-    border-bottom: thin solid grey;
+    border-bottom: thin solid transparent;
+    font-family: 'Bungee', cursive;
 }
+
 .navbar-li {
  color: white;
 }
@@ -37,8 +46,49 @@
   text-decoration: none;
 }
 
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.intro-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.services-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
 body {
-  font:Montserrat, sans-serif;
+  font-family: 'Lalezar', cursive;
 
 }
 

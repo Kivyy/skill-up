@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'rooms/show'
 
   resources :skills do
-    resources :posts 
+    resources :posts
   end
 
 
