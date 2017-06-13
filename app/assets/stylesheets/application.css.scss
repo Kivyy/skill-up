@@ -28,7 +28,9 @@
 .navbar-inner {
     background-color: #80edd9;
     border-bottom: thin solid grey;
+    font-family: 'Bungee', cursive;
 }
+
 .navbar-li {
  color: white;
 }
@@ -37,8 +39,49 @@
   text-decoration: none;
 }
 
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.intro-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.services-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
 body {
-  font:Montserrat, sans-serif;
+  font-family: 'Lalezar', cursive;
 
 }
 
