@@ -56,6 +56,7 @@ Skill.create(title: "UI/UX", category: "Technology", img_url: "https://images.pe
 Skill.create(title: "Big Data", category: "Technology", img_url: "https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Other", category: "Technology", img_url: "https://images.pexels.com/photos/90807/pexels-photo-90807.jpeg?h=350&auto=compress&cs=tinysrgb")
 
+user5.posts.create(skill_id: 13, description: "Attained my blackbelt at the age of 13, my hands are lethal")
 
 40.times do
 Post.create(skill_id: rand(1...4), creator_id: rand(1...3), description: Faker::Music.instrument)
