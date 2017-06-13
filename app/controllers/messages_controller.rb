@@ -1,5 +1,4 @@
 class MessagesController < ApplicationController
-
   before_action do
     @apprenticeship = Apprenticeship.find(params[:apprenticeship_id])
   end
