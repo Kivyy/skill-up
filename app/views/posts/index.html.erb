@@ -1,0 +1,4 @@
+<%= @posts.each do |post| %>
+  <p><%= post.creator.username %></p>
+  <%= post.description %>
+<% end %>
