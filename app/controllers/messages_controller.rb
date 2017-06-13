@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+
   before_action do
     @apprenticeship = Apprenticeship.find(params[:apprenticeship_id])
   end
@@ -41,8 +42,8 @@ class MessagesController < ApplicationController
         redirect_to apprenticeship_messages_path(@apprenticeship)
       end
     end
-
   end
+
   private
 
   def message_params
