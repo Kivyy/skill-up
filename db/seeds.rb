@@ -55,6 +55,7 @@ Skill.create(title: "UI/UX", category: "Technology", img_url: "https://images.pe
 Skill.create(title: "Big Data", category: "Technology", img_url: "https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Other", category: "Technology", img_url: "https://images.pexels.com/photos/90807/pexels-photo-90807.jpeg?h=350&auto=compress&cs=tinysrgb")
 
+user5.posts.create(skill_id: 13, description: "Attained my blackbelt at the age of 13, my hands are lethal")
 
 user3.posts.create(skill_id: 1, description: "Grad student from Berklee College of music, proficient in Classical Guitar. Available during the weekends!")
 user3.posts.create(skill_id: 3, description: "I have ghostwritten music for local singers, and I'm currently recording my own guitar solo album")
