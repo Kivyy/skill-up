@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @skill = Skill.new
-
+    @requests = Apprenticeship.select {|a| a.requestor == @user}
   end
 
   def create
