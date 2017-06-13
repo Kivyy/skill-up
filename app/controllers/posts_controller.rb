@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
     @skill = Skill.find_by(id: params[:skill_id])
   end
 
