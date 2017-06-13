@@ -7,6 +7,7 @@ user4 = User.create(first_name: "alex", last_name: "joe", username: "alex", emai
 user5 = User.create(first_name: "jason", last_name: "joe", username: "jason", email: "jason@gmail.com", password: "password")
 user6 = User.create(first_name: "tom", last_name: "joe", username: "tom", email: "tom@gmail.com", password: "password")
 
+
 Skill.create(title: "String", category: "Music", img_url: "https://images.pexels.com/photos/111287/pexels-photo-111287.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Brass", category: "Music", img_url: "https://images.pexels.com/photos/45243/saxophone-music-gold-gloss-45243.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Woodwind", category: "Music", img_url: "https://images.pexels.com/photos/30717/pexels-photo-30717.jpg?h=350&auto=compress&cs=tinysrgb")
@@ -53,7 +54,6 @@ Skill.create(title: "Web Design", category: "Technology", img_url: "https://imag
 Skill.create(title: "UI/UX", category: "Technology", img_url: "https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Big Data", category: "Technology", img_url: "https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Other", category: "Technology", img_url: "https://images.pexels.com/photos/90807/pexels-photo-90807.jpeg?h=350&auto=compress&cs=tinysrgb")
-
 
 
 user3.posts.create(skill_id: 1, description: "Grad student from Berklee College of music, proficient in Classical Guitar. Available during the weekends!")
