@@ -209,6 +209,17 @@ th {
   padding: 1%;
 }
 
-#footer {
-  max-height: 20%;
+.footer-class{
+  width: 100%;
+  margin: 0 auto;
+  .container {
+    text-align: center;
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.post-img {
+  border-radius: 25px;
 }
