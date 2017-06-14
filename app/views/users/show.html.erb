@@ -58,20 +58,23 @@
 </div>
 
 <div class="container">
+<h2>Connections</h2>
   <table class="table table-striped">
-    <h2>Connections</h2>
+    <th>Offer</th>
+    <th>Requester</th>
+    <th>Skill Page</th>
+    <th>Messages</th>
     <% @user.posts.each do |post| %>
         <% post.apprenticeships.each do |a| %>
         <tr>
-          <td>Offer: <%= a.offer %></td>
-          <td>Requestor: <%= a.requestor.username %></td>
-          <td><%= link_to "Post Page", post_path(post) %></td>
-          <td><%= link_to "Profile", user_path(a.requestor_id) %></td>
+          <td><%= a.offer %></td>
+          <td><%= link_to a.requestor.username, user_path(a.requestor_id) %></td>
+          <td><%= link_to a.post.skill.title, post_path(post) %></td>
           <td>
            <% if a.accepted == false %>
            <p>Status: In Progess</p>
             <% else %>
-              <%= link_to 'Messages', apprenticeship_messages_path(a) , class: "btn btn-primary" %>
+              <%= link_to 'Messages', apprenticeship_messages_path(a) , class: "btn btn-primary black-bg" %>
             <% end %>
          </td>
         </tr>
@@ -81,22 +84,23 @@
 </div>
 
 <div class="container">
+  <h2>Requests</h2>
   <div class="table-responsive">
     <table class="table">
-      <h2>Requests</h2>
+    <th>Offer</th>
+    <th>Requester</th>
+    <th>Skill Page</th>
+    <th>Messages</th>
           <% @requests.each do |a| %>
-          <tr>
-            <td>Offer: <%= a.offer %></td>
-            <br>
-            <td>
-              Post Owner: <%= a.post.creator.username %></td>
-            <td><%= link_to "Post Page", post_path(a.post) %></td>
-            <br>
-            <td>
-             <% if a.accepted == false %>
-             <p>Status: In Progess</p>
-              <% else %>
-              <%= link_to 'Messages', apprenticeship_messages_path(a) , class: "btn btn-primary" %>
+        <tr>
+          <td><%= a.offer %></td>
+          <td><%= link_to a.requestor.username, user_path(a.requestor_id) %></td>
+          <td><%= link_to a.post.skill.title, post_path(a.post) %></td>
+          <td>
+           <% if a.accepted == false %>
+           <p>Status: In Progess</p>
+            <% else %>
+              <%= link_to 'Messages', apprenticeship_messages_path(a) , class: "btn btn-primary black-bg" %>
               <% end %>
            </td>
           </tr>
