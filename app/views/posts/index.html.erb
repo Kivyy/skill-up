@@ -5,7 +5,7 @@
   <% if @posts.length > 0 %>
     <% @posts.each do |post| %>
       <div class="card col-md-3 col-xs-12 text-center card-border well">
-          <h2 class="card-title skill-title card-img-overlay"><br><%= post.skill.category %></h4>
+          <h2 class="card-title skill-title card-img-overlay"><br><%= post.skill.category %></h2>
           <h3 class="card-title skill-title card-img-overlay"><%= post.skill.title %></h4>
           <%= link_to image_tag(post.skill.img_url, :class => "card-img-top img-post", size: "256x205"), post_path(post.id) %>
         <div class="card-block">
