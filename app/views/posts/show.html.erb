@@ -9,7 +9,7 @@
       <%= link_to image_tag(@post.skill.img_url, :class => "img-fluid", size: "320x256"), post_path(@post.id) %>
       <br>
       <div link-to-user>
-        <%= link_to 'User Profile',  user_path(@post.creator), :class => "btn btn-danger" %>
+        <%= link_to 'User Profile',  user_path(@post.creator), style: 'width:34%;', :class => "btn btn-primary btn-user" %>
       </div>
   </div>
 
@@ -39,7 +39,7 @@
   <div><br>
     <% if @post.apprenticeships.any? %>
       <% if @post.creator == current_user %>
-      <div class="panel panel-primary offer-panel">
+      <div class="panel offer-panel panel-default">
         <div class="panel-heading">  <h4> Current offer: </h4> </div>
           <ul>
             <% @post.apprenticeships.each do |app| %>
