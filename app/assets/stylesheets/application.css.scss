@@ -110,3 +110,23 @@ th {
   float: right;
   margin-bottom: 10%;
 }
+
+.card-border {
+  border-style: groove;
+  border-radius: 25px;
+  padding-bottom: 50px;
+  margin: 0 20px 0 20px;
+}
+
+.card {
+  width: 25rem;
+}
+
+.img-post {
+  border-radius: 40px;
+  margin-top: 10px;
+}
+
+.display-of-cards {
+  justify-content: space-between;
+}
