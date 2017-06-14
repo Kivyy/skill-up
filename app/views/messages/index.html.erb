@@ -31,6 +31,8 @@
 
     <div>
       <input class="btn btn-primary chat-submit black-bg" type="submit" value="Submit message">
+
+      <%= link_to 'Back', user_path(current_user.id) , class: "btn btn-primary black-bg" %>
     </div>
 
   <% end %>

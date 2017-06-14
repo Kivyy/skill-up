@@ -5,9 +5,9 @@ user4 = User.create(first_name: "alex", last_name: "joe", username: "alex", emai
 user5 = User.create(first_name: "jason", last_name: "joe", username: "jason", email: "jason@gmail.com", password: "password")
 user6 = User.create(first_name: "tom", last_name: "joe", username: "tom", email: "tom@gmail.com", password: "password")
 
-Skill.create(title: "String", category: "Music", img_url: "https://images.pexels.com/photos/111287/pexels-photo-111287.jpeg?h=350&auto=compress&cs=tinysrgb")
-Skill.create(title: "Brass", category: "Music", img_url: "https://images.pexels.com/photos/45243/saxophone-music-gold-gloss-45243.jpeg?h=350&auto=compress&cs=tinysrgb")
-Skill.create(title: "Woodwind", category: "Music", img_url: "https://images.pexels.com/photos/30717/pexels-photo-30717.jpg?h=350&auto=compress&cs=tinysrgb")
+Skill.create(title: "String Instruments", category: "Music", img_url: "https://images.pexels.com/photos/111287/pexels-photo-111287.jpeg?h=350&auto=compress&cs=tinysrgb")
+Skill.create(title: "Brass Instruments", category: "Music", img_url: "https://images.pexels.com/photos/45243/saxophone-music-gold-gloss-45243.jpeg?h=350&auto=compress&cs=tinysrgb")
+Skill.create(title: "Woodwind Instruments", category: "Music", img_url: "https://images.pexels.com/photos/30717/pexels-photo-30717.jpg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Percussion", category: "Music", img_url: "https://images.pexels.com/photos/210799/pexels-photo-210799.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Keyboard", category: "Music", img_url: "https://images.pexels.com/photos/48620/pexels-photo-48620.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Music Production", category: "Music", img_url: "https://images.pexels.com/photos/87351/pexels-photo-87351.jpeg?h=350&auto=compress&cs=tinysrgb")
@@ -25,7 +25,7 @@ Skill.create(title: "Teams Sports", category: "Sports", img_url: "https://images
 Skill.create(title: "Other", category: "Sports", img_url: "https://images.pexels.com/photos/94624/pexels-photo-94624.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb")
 
 
-Skill.create(title: "Cardio", category: "Fitness", img_url: "https://images.pexels.com/photos/29578/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb")
+Skill.create(title: "Cardio/Anaerobic Fitness", category: "Fitness", img_url: "https://images.pexels.com/photos/29578/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Weightlifting", category: "Fitness", img_url: "https://images.pexels.com/photos/17840/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Nutrition", category: "Fitness", img_url: "https://images.pexels.com/photos/407110/pexels-photo-407110.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Supplements", category: "Fitness", img_url: "https://images.pexels.com/photos/33355/capsule-pill-health-medicine.jpg?w=940&h=650&auto=compress&cs=tinysrgb")
@@ -55,7 +55,7 @@ Skill.create(title: "Other", category: "Technology", img_url: "https://images.pe
 user5.posts.create(skill_id: 13, description: "Attained my blackbelt at the age of 13, my hands are lethal")
 
 user4.posts.create(skill_id: 18, description: "I've been running on and off for about 15 years. My longest run has been a little over 8 miles but my usual distance is around 3 miles. My average pace is a 8:30 mile. I practice proper form and would love to teach you in exchange for some sweet skills!")
-user4.posts.create(skill_id: 14, description: "I've been running on and off for about 15 years. My longest run has been a little over 8 miles but my usual distance is around 3 miles. My average pace is a 8:30 mile. I practice proper form and would love to teach you in exchange for some sweet skills! I'm not an olympian or anything but I'm sure I can improve your run skills.")
+user4.posts.create(skill_id: 14, description: "I used to compete in High School and College and have one national competitions. I have a fantastic routine and can help you reach your goals!")
 user4.posts.create(skill_id: 9, description: "What will I do next? Who knows! That's how good I am at improvisation. Now, I can't promise that I'll be funny but I can promise I will make everything very awkward and probably asked politely to leave.")
 user4.posts.create(skill_id: 3, description: "If you're looking to learn how to play the clarinet, I'm your guy! Let me teach you the difference between a C flat and a B sharp so that you can BE SHARP. Ehhhh, haha. Jk, but really. Lemme teach you and offer me something cool to learn in return. Let's hook up!")
 user4.posts.create(skill_id: 16, description: "I'm pretty decent at basketball. Not so much the scoring or the passing or the dribbling but I'm pretty good at the part where you sweat all day and feel like your lungs are about to explode. If that sounds like your cup of tea, hit me up and let's swap some skills!")

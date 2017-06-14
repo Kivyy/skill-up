@@ -97,7 +97,7 @@ th {
   margin-right:2%;
   margin-left:2%;
   float: left;
-  background-color: 	#D3D3D3;
+    background-color: 	#D3D3D3;
   box-shadow: 10px 10px 5px #888888;
 }
 
@@ -153,6 +153,14 @@ th {
   justify-content: space-between;
 }
 
+.skill-post {
+  margin-bottom: 40px;
+}
+
+.skill-body {
+  color: #191970;
+}
+
 .post-main {
   padding: 1% 5% 5% 8%;
   background-color:  #dadfe8;
@@ -182,9 +190,10 @@ th {
   display: block;
 }
 
-.btn-danger {
+.btn-user {
   margin: auto auto;
   display: block;
+  background-color: grey;
 }
 
 .btn-lg {
@@ -198,4 +207,8 @@ th {
 
 .app-list {
   padding: 1%;
+}
+
+#footer {
+  max-height: 20%;
 }
