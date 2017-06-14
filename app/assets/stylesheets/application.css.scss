@@ -190,9 +190,10 @@ th {
   display: block;
 }
 
-.btn-danger {
+.btn-user {
   margin: auto auto;
   display: block;
+  background-color: grey;
 }
 
 .btn-lg {
@@ -206,4 +207,8 @@ th {
 
 .app-list {
   padding: 1%;
+}
+
+#footer {
+  max-height: 20%;
 }
