@@ -31,26 +31,28 @@
     </div>
 <div class="container">
   <div class="left-table">
-    <table class="table">
-      <thead class="thead-inverse">
-        <th scope="row">Skills I have</th>
-        <tr>
-          <th>Title</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @user.posts.each do |post| %>
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-inverse">
+          <h2>Skills I have</h2>
           <tr>
-            <td><%= post.skill.title %></td>
-            <td><%= post.description %></td>
-            <td><%= link_to "Link", post_path(post) %></td>
-            <td><%= link_to 'Delete', post, :method => :delete, :confirm => "Are you sure?" %></td>
-            <td><%= link_to 'Edit', edit_post_path(post)%></td>
+            <th>Title</th>
+            <th>Description</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @user.posts.each do |post| %>
+            <tr>
+              <td><%= post.skill.title %></td>
+              <td><%= post.description %></td>
+              <td><%= link_to "Link", post_path(post) %></td>
+              <td><%= link_to 'Delete', post, :method => :delete, :confirm => "Are you sure?" %></td>
+              <td><%= link_to 'Edit', edit_post_path(post)%></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
@@ -79,27 +81,29 @@
 </div>
 
 <div class="container">
-  <table class="table">
-    <h2>Requests</h2>
-        <% @requests.each do |a| %>
-        <tr>
-          <td>Offer: <%= a.offer %></td>
-          <br>
-          <td>
-            Post Owner: <%= a.post.creator.username %></td>
-          <td><%= link_to "Post Page", post_path(a.post) %></td>
-          <br>
-          <td>Status:
-           <% if a.accepted == false %>
-           <p>In Progess</p>
-            <% else %>
-            <p>Accepted</p>
-            <%= link_to 'Apprenticeship', apprenticeship_messages_path(a) , class: "btn btn-primary" %>
-            <% end %>
-         </td>
-        </tr>
-        <% end %>
-  </table>
+  <div class="table-responsive">
+    <table class="table">
+      <h2>Requests</h2>
+          <% @requests.each do |a| %>
+          <tr>
+            <td>Offer: <%= a.offer %></td>
+            <br>
+            <td>
+              Post Owner: <%= a.post.creator.username %></td>
+            <td><%= link_to "Post Page", post_path(a.post) %></td>
+            <br>
+            <td>Status:
+             <% if a.accepted == false %>
+             <p>In Progess</p>
+              <% else %>
+              <p>Accepted</p>
+              <%= link_to 'Apprenticeship', apprenticeship_messages_path(a) , class: "btn btn-primary" %>
+              <% end %>
+           </td>
+          </tr>
+          <% end %>
+    </table>
+  </div>
 </div>
 <div class="container">
   <div class="form-group">
