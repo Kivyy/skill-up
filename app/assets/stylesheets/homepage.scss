@@ -38,6 +38,7 @@ background-color: #d2d6db;
  color: black;
  font-size: 35px;
  font-family: 'Rubik', sans-serif;
+ box-shadow: 5px 5px 5px #888888;
 }
 
 .step-col-1 {
@@ -66,6 +67,7 @@ padding: 1%;
   padding: 25px;
   height: 200px;
   font-size: 25px;
+  box-shadow: 3px 3px 3px #888888;
 }
 
 #category-div {
@@ -73,6 +75,7 @@ padding: 1%;
   height: 400px;
   background-color: #6d7177;
   color: white;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 header {
@@ -81,6 +84,7 @@ header {
   background-image: url('https://static.pexels.com/photos/36178/pexels-photo.jpg');
   background-size: cover;
   color: white;
+  box-shadow: 5px 5px 5px #888888;
 }
 header .container {
   padding-top: 100px;
