@@ -1,31 +1,46 @@
-<div class="skill-new-post btn btn-link">
-  <%= link_to "New Post", new_post_path(:skill_id => @skill.id) %>
-</div>
 <div class="skill-body">
-  <div class="skill-show">
-    <h1>Skill: <%= @skill.title %></h1>
-    <% @skill.posts.each do |post| %>
-    <%= link_to 'User Profile', user_path(post.creator) %>
-      <div class="card-block">
-        <%= link_to image_tag(post.skill.img_url, :class => "img-fluid", size: "320x256"), post_path(post.id) %>
-        <div class="card-block">
-          <p class="card-text">Description: <%= post.description %></p>
-        </div>
-      </div>
+  <div class="skill-new-post btn btn-link">
+    <%= link_to "New Post", new_post_path(:skill_id => @skill.id) %>
+  </div>
 
-      <% if logged_in? %>
-        <% if post.creator != current_user %>
-          <%= form_for :apprenticeship, url: '/apprenticeships' do |f| %>
+  <div class="skill-show">
+    <h1>Skill:
+      <%= @skill.title %></h1>
+    <br>
+    <div class="card text-center card-border well">
+
+      <% @skill.posts.each do |post| %>
+      <table class="table">
+        <tr>
+          <td>
+            <div class="skill-post">
+
+              <%= link_to 'User Profile', user_path(post.creator), class: "btn btn-info" %>
+              <div class="card-block">
+                <%= link_to image_tag(post.skill.img_url, :class => "img-fluid", size: "320x256"), post_path(post.id) %>
+              </div>
+              <div class="card-block">
+                <p class=class="card-title skill-title card-img-overlay">Description:
+                  <%= post.description %></p>
+              </div>
+            </div>
+
+
+        <% if logged_in? %>
+          <% if post.creator != current_user %>
+            <%= form_for :apprenticeship, url: '/apprenticeships' do |f| %>
             <%= f.label "Offer: "%>
             <%= f.text_field :offer %>
             <%= f.hidden_field :requestor_id, :value => current_user.id %>
             <%= f.hidden_field :post_id, :value => post.id %>
-            <%= f.submit "Send a request to #{post.creator.username}!" %>
+            <%= f.submit "Send Request", class: "btn btn-primary" %>
+            <% end %>
+          <% end %>
         <% end %>
+
       <% end %>
-    <% end %>
-    <br>
-  <% end %>
-    </div>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
