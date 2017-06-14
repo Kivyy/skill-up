@@ -7,27 +7,21 @@
     <h1>Skill:
       <%= @skill.title %></h1>
     <br>
-    <div class="card text-center card-border well">
-
+    <div class='container-fluid'>
+      <div class='row'>
       <% @skill.posts.each do |post| %>
-      <table class="table">
-        <tr>
-          <td>
-            <div class="skill-post">
-
-              <%= link_to "#{post.creator.username}'s profile", user_path(post.creator), class: "btn btn-info" %>
-              <div class="card-block"><br>
-                <%= link_to image_tag(post.skill.img_url, :class => "img-fluid post-img", size: "320x256"), post_path(post.id) %>
-              </div>
-              <div class="card-block">
-                <p class=class="card-title skill-title card-img-overlay">Description:
-                  <%= post.description %></p>
-              </div>
-            </div>
-
-
-        <% if logged_in? %>
-          <% if post.creator != current_user %>
+      <div class="card-group display-of-cards">
+        <div class="card col-md-3 col-xs-12 text-center card-border well">
+          <div class="card-header">
+            <h2 class="card-title skill-title card-img-overlay"><br><%= post.skill.category %></h4>
+            <h3 class="card-title skill-title card-img-overlay"><br><%= post.skill.title %></h4>
+          </div>
+          <%= link_to image_tag(post.skill.img_url, :class => "card-img-top img-post", size: "256x205"), post_path(post.id) %>
+          <div class="card-block">
+            <p class="card-text"><%= post.description %></p>
+            <%= link_to "See #{post.creator.username}'s profile", post.creator, :class => "btn btn-primary btn-block"%>
+            <% if logged_in? %>
+            <% if post.creator != current_user %>
             <%= form_for :apprenticeship, url: '/apprenticeships' do |f| %>
             <%= f.label "Offer: "%>
             <%= f.text_field :offer %>
@@ -35,8 +29,12 @@
             <%= f.hidden_field :post_id, :value => post.id %>
             <%= f.submit "Send Request", class: "btn btn-primary" %>
             <% end %>
-          <% end %>
-        <% end %>
+            <% end %>
+            <% end %>
+          </div>
+        </div>
+
+
 
       <% end %>
         </td>
