@@ -33,7 +33,7 @@
 <div class="container">
   <div class="left-table">
     <div class="table-responsive">
-      <table class="table">
+      <table class="table table-striped">
         <thead class="thead-inverse">
           <h2>Skills I have</h2>
           <tr>
@@ -58,16 +58,15 @@
 </div>
 
 <div class="container">
-  <table class="table">
+  <table class="table table-striped">
     <h2>Connections</h2>
     <% @user.posts.each do |post| %>
         <% post.apprenticeships.each do |a| %>
         <tr>
           <td>Offer: <%= a.offer %></td>
-          <br>
           <td>Requestor: <%= a.requestor.username %></td>
           <td><%= link_to "Post Page", post_path(post) %></td>
-          <br>
+          <td><%= link_to "Profile", user_path(post.apprenticeships.first.requestor_id) %></td>
           <td>Status:
            <% if a.accepted == false %>
            <p>In Progess</p>
