@@ -1,7 +1,7 @@
 <br><br><br><br><br><br>
 
 <div class="container post-main panel panel-default">
-  <div class="panel-heading"><strong>Post:  <%= @post.id %> </strong></div>
+  <div class="panel-heading"><strong>Skill:  <%= @post.skill.title %> </strong></div>
 
   <div class="description-box well">
     <p><strong>Post Description:</strong>  <%= @post.description %></p>
@@ -26,7 +26,7 @@
               <%= f.label "Make an offer: "%>
               <%= f.text_field :offer, :class => "form-control" %>
               <%= f.hidden_field :requestor_id, :value => current_user.id %>
-              <%= f.hidden_field :post_id, :value => @post.id %>
+              <%= f.hidden_field :post_id, :value => @post.id %><br>
               <%= f.submit "Send a request to #{@post.creator.username}!" , :class => "btn btn-default btn-lg"%>
             <% end %>
           <% end %>
