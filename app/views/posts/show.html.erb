@@ -40,7 +40,7 @@
     <% if @post.apprenticeships.any? %>
       <% if @post.creator == current_user %>
       <div class="panel panel-primary offer-panel">
-        <div class="panel-heading">  <h4> Current offer: </h4> </div>
+        <div class="panel-heading black-bg">  <h4> Current offer: </h4> </div>
           <ul>
             <% @post.apprenticeships.each do |app| %>
               <li class="app-list"><%= app.offer %> - <strong><%= app.requestor.full_name %></strong>     <span><%= link_to 'Accept', apprenticeship_messages_path(app) , :class => "btn btn-primary "%></span> </li>
