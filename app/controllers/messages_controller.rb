@@ -41,8 +41,8 @@ class MessagesController < ApplicationController
         redirect_to apprenticeship_messages_path(@apprenticeship)
       end
     end
-
   end
+
   private
 
   def message_params
