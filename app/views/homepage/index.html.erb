@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <img class="img-responsive" src="http://icons.veryicon.com/256/System/Kameleon/Online%20Shopping.png" alt="">
                 <div class="intro-text">
-                    <h1 class="name">Welcome to Skill-UP</h1>
+                    <h1 class="name">Welcome to <span class="logo-font">Skill-UP</span> </h1>
                     <hr class="star-light">
                     <span class="skills">Connect and start learning</span>
                 </div>
@@ -14,30 +14,30 @@
 </header>
 
 <div class="container-fluid bg-2 text-center" id="seconddiv">
-  <h2 class="margin stepheader" >How does Skill-Up Works?</h2>
+  <h2 class="margin stepheader" >How does Skill-Up work?</h2>
   <div class="row align-items-center">
     <div class="col-6 col-sm-3 step-col-1">
       Step 1:
-      <ul>
-        <li class="step-li">Register as a new user.</li>
+      <ul><br><br>
+        <li class="step-li "> Register as a new user.</li>
       </ul>
     </div>
     <div class="col-6 col-sm-3 step-col-2">
       Step 2:
-      <ul>
-        <li class="step-li">Set up user profile</li>
+      <ul><br><br>
+        <li class="step-li "> Set up user profile</li>
       </ul>
     </div>
     <div class="col-6 col-sm-3 step-col-3">
       Step 3:
-      <ul>
-        <li class="step-li">Search for the skill you want to learn</li>
+      <ul><br><br>
+        <li class="step-li "> Search or browse for skills you want to learn</li>
       </ul>
     </div>
     <div class="col-6 col-sm-3 ">
       Step 4:
-      <ul>
-        <li class="step-li">Send a request to the user.</li>
+      <ul><br><br>
+        <li class="step-li "> Send a request and an offer of a skill to exchange to the user.</li>
       </ul>
     </div>
   </div>
@@ -54,17 +54,58 @@
 
 <div class="container-fluid bg-3 text-center" id="category-div">
   <div class="row">
-      <% @skill.each_slice(4) do |slice| %>
-      <% slice.each do |skill| %>
-        <div class="col-sm-3">
-          <h3><%= skill.title %></h3>
-        </div>
-          <% end %>
+      <div class="col-xs-2">
+      <h2>Music</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Music" %>
+          <h4><%= skill.title %></h4>
         <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Sports</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Sports" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Fitness</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Fitness" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Education</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Education" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Cooking</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Cooking" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="col-xs-2">
+      <h2>Technology</h2>
+      <% @skill.each do |skill| %>
+          <% if skill.category == "Technology" %>
+          <h4><%= skill.title %></h4>
+        <% end %>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>
 
-<nav class="navbar fixed-bottom navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Fixed bottom</a>
-</nav>
+<footer>
+  <p>© 2017 Created by:&nbsp; <a href="">Carlos Grijalva</a>,&nbsp; <a href="#">Tom Feng</a>,&nbsp; <a href="#">Jason Wang</a>,&nbsp; <a href="#">Alex Camacho</a> and <a href="#">Kiv Lo</a> </p>
+</footer>

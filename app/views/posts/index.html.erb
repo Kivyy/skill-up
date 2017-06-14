@@ -1,7 +1,8 @@
 
 <br><br><br><br><br><br><br><br><br><br>
-<div class="container-fluid">
-  <% if @posts %>
+<div class='container-fluid'>
+  <div class='row'>
+  <% if @posts.length > 0 %>
     <% @posts.each do |post| %>
     <div class="card-group display-of-cards">
     <!-- <div class="card-block col-md-4 col-xs-12">
@@ -28,6 +29,7 @@
     </div>
   <% else %>
     <br><br><br><br><br>
-    <h4>No results found! Try again!</h4>
+    <h4>  <a href="/skills" class="btn btn-default btn-lg">
+No results found! Try again! Click here to see all skills</a></h4>
   <% end %>
 </div>

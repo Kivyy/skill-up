@@ -2,69 +2,84 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.firstdiv {
-  background-color: #80edd9;
-  height:600px;
-  color: white;
-   }
+// #maincontent {
+//   background-color: #800080;
+//   height:600px;
+//   color: white;
+//    }
 
 
+.skills {
+  font-weight: bold;
+}
 
 .stepheader {
  padding: 10px;
  font-family: 'Lalezar', cursive;
 }
 
+.logo-font {
+  font-size: 90px;
+  font-family: 'Bungee', cursive;
+  color: #7f8082;
+  text-shadow: -1px 0  #d1e0e0
+, 0 1px   #d1e0e0
+, 1px 0   #d1e0e0
+, 0 -1px   #d1e0e0
+;
+}
 
 #seconddiv {
- background-image: url('https://code2prog.com/wp-content/uploads/2015/01/ceystalhorizon-flat-design-wallpapers-HD-free-wallpapers-backgrounds-images-FHD-4k-download-2014-2015-2016.jpg');
+background-color: #d2d6db;
  // min-height: 100%;
  background-position: center;
  background-size: cover;
  height:350px;
- color: white;
- font-size: 25px;
- font-family: 'Bungee', cursive;
+ color: black;
+ font-size: 35px;
+ font-family: 'Rubik', sans-serif;
 }
 
 .step-col-1 {
- border-right: thin solid white;
+ border-right: thin solid black;
  height: 200px;
- padding: 1%
+ padding: 1%;
 }
 
 .step-col-2 {
-border-right: thin solid white;
+ border-right: thin solid black;
 height: 200px;
-padding: 1%
+padding: 1%;
 }
 
 .step-col-3 {
-border-right: thin solid white;
+ border-right: thin solid black;
 height: 200px;
-padding: 1%
-
+padding: 1%;
 }
 
 .step-li {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #explore-div {
   padding: 25px;
   height: 200px;
+  font-size: 25px;
 }
 
 #category-div {
   padding-top: 15px;
   height: 400px;
-  background-color: #80edd9;
-  color: grey;
+  background-color: #6d7177;
+  color: white;
 }
 
 header {
   text-align: center;
-  background: #80edd9;
+  // background: #009999;
+  background-image: url('https://static.pexels.com/photos/36178/pexels-photo.jpg');
+  background-size: cover;
   color: white;
 }
 header .container {
@@ -112,4 +127,22 @@ hr.star-primary {
 hr.star-primary:after {
   background-color: white;
   color: #2C3E50;
+}
+
+
+// footer
+footer{
+    background-color: #424558;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    text-align: center;
+    color: #CCC;
+}
+
+footer p {
+    padding: 25px;
+    margin: 0px;
+    line-height: 100%;
 }

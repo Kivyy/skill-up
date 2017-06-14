@@ -44,7 +44,9 @@
           <tr>
             <td><%= post.skill.title %></td>
             <td><%= post.description %></td>
-            <td><%= link_to "Post Page", post_path(post) %></td>
+            <td><%= link_to "Link", post_path(post) %></td>
+            <td><%= link_to 'Delete', post, :method => :delete, :confirm => "Are you sure?" %></td>
+            <td><%= link_to 'Edit', edit_post_path(post)%></td>
           </tr>
         <% end %>
       </tbody>
@@ -90,6 +92,7 @@
            <p>In Progess</p>
             <% else %>
             <p>Accepted</p>
+            <%= link_to 'Apprenticeship', apprenticeship_messages_path(a) , class: "btn btn-primary" %>
             <% end %>
          </td>
         </tr>
