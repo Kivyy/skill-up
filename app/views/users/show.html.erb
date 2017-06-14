@@ -21,8 +21,8 @@
               <p><br>
                 <i class="glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;<%= @user.email %>
                 <br /><br>
-                <% if current_user.id === @user.id %>
-                <%= link_to "Edit Profile", edit_user_path(@user) %>
+                <% if logged_in? && (current_user.id === @user.id) %>
+                  <%= link_to "Edit Profile", edit_user_path(@user) %>
                 <% end %>
               </div>
             </div>
@@ -110,7 +110,7 @@
 </div>
 <div class="container">
   <div class="form-group">
-      <% if current_user.id === @user.id %>
+      <% if logged_in? && (current_user.id === @user.id) %>
         <h2>Add Skill</h2>
         <%= form_for Post.new do |f| %>
             <%= f.label :skill %>
