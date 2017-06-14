@@ -8,9 +8,24 @@
 }
 
 .black-bg {
-  background-color: black;
+  background-color: gray;
 }
 
 #message-header {
   padding-left: 5%;
+}
+
+.panel-heading {
+  black-color: black;
+}
+
+.center-objects {
+  margin: 0 auto;
+}
+
+.text-of-card {
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: gray;
 }
