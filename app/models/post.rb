@@ -11,8 +11,6 @@ class Post < ApplicationRecord
   def self.description_search(query)
     if query.present?
       search(query)
-    # else
-    #   scoped
     end
   end
 end
