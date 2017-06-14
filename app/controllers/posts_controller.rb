@@ -19,9 +19,17 @@ class PostsController < ApplicationController
     @post = current_user.posts.new(post_params)
     if @post.save
       flash[:success] = "You've added a skill!"
-      redirect_to current_user
+      if params[:post][:redirect_to]
+        redirect_to skill_path(@post.skill.id)
+      else
+        redirect_to current_user
+      end
     else
-      redirect_to current_user
+      if params[:post][:redirect_to]
+        redirect_to skill_path(@post.skill.id)
+      else
+        redirect_to current_user
+      end
     end
   end
 
