@@ -2,12 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// #maincontent {
-//   background-color: #800080;
-//   height:600px;
-//   color: white;
-//    }
-
 
 .skills {
   font-weight: bold;
@@ -17,28 +11,21 @@
  padding: 10px;
  font-family: 'Lalezar', cursive;
 }
-
-.logo-font {
-  font-size: 90px;
-  font-family: 'Bungee', cursive;
-  color: #7f8082;
-  text-shadow: -1px 0  #d1e0e0
-, 0 1px   #d1e0e0
-, 1px 0   #d1e0e0
-, 0 -1px   #d1e0e0
-;
+//
+.header-div {
+  background-color: white;
+  padding-top: 15px;
+  width: 80%;
+  box-shadow: 5px 5px 5px black;
 }
 
 #seconddiv {
-background-color: #d2d6db;
- // min-height: 100%;
- background-position: center;
- background-size: cover;
+background-color: #27252d;
  height:350px;
- color: black;
+ color: white;;
  font-size: 35px;
  font-family: 'Rubik', sans-serif;
- box-shadow: 5px 5px 5px #888888;
+ box-shadow: 5px 5px 5px black;
 }
 
 .step-col-1 {
@@ -81,20 +68,14 @@ padding: 1%;
 
 header {
   text-align: center;
-  // background: #009999;
-  background-image: url('https://static.pexels.com/photos/36178/pexels-photo.jpg');
+  height: 975px;
+  background-image: url('https://static.pexels.com/photos/7097/people-coffee-tea-meeting.jpg');
   background-size: cover;
-  color: white;
+  color: #2f3030;
   box-shadow: 5px 5px 5px #888888;
+  padding: 15%;
 }
-header .container {
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-header img {
-  display: block;
-  margin: 0 auto 20px;
-}
+
 header .intro-text .name {
   display: block;
   font-family: 'Bungee', cursive;
