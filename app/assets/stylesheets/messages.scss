@@ -2,3 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "semantic-ui";
+
+.messages-container {
+  width: 50%;
+}
+
+.black-bg {
+  background-color: gray;
+}
+
+#message-header {
+  padding-left: 5%;
+}
+
+.panel-heading {
+  black-color: black;
+}
+
+.center-objects {
+  margin: 0 auto;
+}
+
+.text-of-card {
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: gray;
+}

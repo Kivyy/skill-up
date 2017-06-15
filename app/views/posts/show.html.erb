@@ -1,15 +1,15 @@
 <br><br><br><br><br><br>
 
 <div class="container post-main panel panel-default">
-  <div class="panel-heading"><strong>Post:  <%= @post.id %> </strong></div>
+  <div class="panel-heading"><strong>Skill:  <%= @post.skill.title %> </strong></div>
 
   <div class="description-box well">
     <p><strong>Post Description:</strong>  <%= @post.description %></p>
     <p><strong>Poster:</strong> <%= @post.creator.full_name.capitalize %> </p>
-      <%= link_to image_tag(@post.skill.img_url, :class => "img-fluid", size: "320x256"), post_path(@post.id) %>
+      <%= link_to image_tag(@post.skill.img_url, :class => "img-fluid post-img", size: "320x256"), post_path(@post.id) %>
       <br>
       <div link-to-user>
-        <%= link_to 'User Profile',  user_path(@post.creator), :class => "btn btn-danger" %>
+        <%= link_to 'User Profile',  user_path(@post.creator), style: 'width:34%;', :class => "btn btn-primary btn-user" %>
       </div>
   </div>
 
@@ -26,7 +26,7 @@
               <%= f.label "Make an offer: "%>
               <%= f.text_field :offer, :class => "form-control" %>
               <%= f.hidden_field :requestor_id, :value => current_user.id %>
-              <%= f.hidden_field :post_id, :value => @post.id %>
+              <%= f.hidden_field :post_id, :value => @post.id %><br>
               <%= f.submit "Send a request to #{@post.creator.username}!" , :class => "btn btn-default btn-lg"%>
             <% end %>
           <% end %>
@@ -39,8 +39,10 @@
   <div><br>
     <% if @post.apprenticeships.any? %>
       <% if @post.creator == current_user %>
-      <div class="panel panel-primary offer-panel">
+
+      <div class="panel offer-panel panel-default">
         <div class="panel-heading">  <h4> Current offer: </h4> </div>
+
           <ul>
             <% @post.apprenticeships.each do |app| %>
               <li class="app-list"><%= app.offer %> - <strong><%= app.requestor.full_name %></strong>     <span><%= link_to 'Accept', apprenticeship_messages_path(app) , :class => "btn btn-primary "%></span> </li>
