@@ -45,7 +45,6 @@ Skill.create(title: "Other", category: "Cooking", img_url: "https://images.pexel
 
 Skill.create(title: "Computer Programming", category: "Technology", img_url: "https://images.pexels.com/photos/90807/pexels-photo-90807.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Engineering", category: "Technology", img_url: "https://images.pexels.com/photos/132700/pexels-photo-132700.jpeg?h=350&auto=compress&cs=tinysrgb")
-Skill.create(title: "Web Design", category: "Technology", img_url: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "UI/UX", category: "Technology", img_url: "https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Big Data", category: "Technology", img_url: "https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Other", category: "Technology", img_url: "https://images.pexels.com/photos/90807/pexels-photo-90807.jpeg?h=350&auto=compress&cs=tinysrgb")
