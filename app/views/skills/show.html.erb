@@ -1,9 +1,7 @@
 <br><br><br><br><br>
 
-<div class="skill-body black-bg">
-  <div class="skill-new-post btn btn-link">
-    <%= link_to "New Post", new_post_path(:skill_id => @skill.id) %>
-  </div>
+<div class="skill-body black-bg"><br>
+    <%= link_to "New Post", new_post_path(:skill_id => @skill.id), :class => "btn btn-default btn-lg explore-btn" %>
 
 <div class='container-fluid black-bg'>
     <h1><%= @skill.title %></h1>

@@ -7,9 +7,11 @@
                     <hr class="star-light">
                     <span class="skills">Connect and start learning</span>
                     <br><br>
+                    <% if !logged_in? %>
                     <a href="/users/new" class="btn btn-default btn-md">
                       Register
                     </a>
+                    <% end %>
                 </div>
             </div>
     </div>
