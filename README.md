@@ -1,22 +1,23 @@
-Welcome to Tutor-Skill
- 
-Where those who want to expand their knowledge in exchange for more knowledge. 
- 
-Users can register for an account
- 
-Users can login/logout
- 
-Users can browse the extensive library of categories
- 
-Users can choose to make a connection with a skill they want to learn
- 
-Users can choose which offer they want to accept
- 
-Users can leave messages to each other
- 
-Users can add skills
- 
-Users can make posts to advertise their skills  
+# Skill Up
 
-Users can search for keywords
+[![Rails](http://emojis.slackmojis.com/emojis/images/1467305311/619/ruby_on_rails.png?1467305311)](rubyonrails.org)
 
+Skill Up is an app where users can interact with each other and exchange knowledge of different skills. Browse posts, make new ones, search for anything that interests you and connect!
+
+## Authors:
+
+  - Carlos Grijalva
+  - Jason Wong
+  - Tom Feng
+  - Kiv Lo
+
+## Built With:
+    - Ruby on Rails
+    - Ajax
+    - Bootstrap/Sass
+
+## Notes:
+ This project was part for DBC's curriculum during the final weeks. For more information on this program [click here](https://devbootcamp.com)
+
+## License:
+ This project is licensed under the MIT License - see the [LICENSE.md](#) file for details
