@@ -5,14 +5,14 @@
   <% if @posts.length > 0 %>
     <% @posts.each do |post| %>
       <div class="card col-md-3 col-xs-12 text-center card-border well">
-          <h2 class="card-title skill-title card-img-overlay"><br><%= post.skill.category %></h2>
+          <h2 class="card-title skill-title card-img-overlay"><br><%= post.skill.category.upcase %></h2>
           <h3 class="card-title skill-title card-img-overlay"><%= post.skill.title %></h4>
           <%= link_to image_tag(post.skill.img_url, :class => "card-img-top img-post", size: "256x205"), post_path(post.id) %>
         <div class="card-block">
         <br>
         <p class="card-text text-of-card"><%= link_to post.description, post_path(post.id) %></p>
-        <%= link_to "View Posting", post_path(post.id), :class => "btn btn-primary btn-block black-bg" %>
-        <%= link_to "See #{post.creator.username}'s profile", post.creator, :class => "btn btn-primary btn-block black-bg"%>
+        <%= link_to "View Posting", post_path(post.id), :class => "btn btn-primary btn-block" %>
+        <%= link_to "See #{post.creator.username}'s profile", post.creator, :class => "btn btn-info btn-block"%>
         </div>
       </div>
       <% end %>
