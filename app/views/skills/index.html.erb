@@ -1,58 +1,57 @@
-
-<div class="skill-index center-text">
-  <div class="index-first text-center">
-    <table class="table">
-      <h1>Technology</h1>
+<br><br><br><br><br><br>
+<div class="card-group display-of-cards center-objects">
+  <div class="card text-center well col-md-4 ">
+    <img src="https://images.pexels.com/photos/11406/c12ee0f379643a278198b2086afd3b9c.jpg?w=940&h=650&auto=compress&cs=tinysrgb" class="image">
+      <h1 class="white-text" >Technology</h1>
       <% @tech.each do |t| %>
-        <tr>
-          <%= link_to t.title, t %>
-        </tr>
-      <br>
+        <div>
+          <%= link_to t.title, t, class: "black-text" %>
+        </div>
       <% end %>
-
-      <h1>Cooking</h1>
+  </div>
+  <div class="card text-center well col-md-4 col-xs-6 ">
+    <img src="https://images.pexels.com/photos/59100/pexels-photo-59100.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="image">
+      <h1 class="white-text" >Cooking</h1>
       <% @cook.each do |t| %>
-        <tr>
-          <%= link_to t.title, t %>
-        </tr>
-      <br>
+        <div>
+          <%= link_to t.title, t, class: "black-text"  %>
+        </div>
       <% end %>
-
-      <h1>Education</h1>
+  </div>
+  <div class="card text-center well col-md-4 col-xs-6">
+    <img src="https://images.pexels.com/photos/232/apple-iphone-books-desk.jpg?h=350&auto=compress&cs=tinysrgb" alt="" class="image">
+      <h1 class="white-text" >Education</h1>
       <% @edu.each do |t| %>
-        <tr>
-          <%= link_to t.title, t %>
-        </tr>
-      <br>
+        <div>
+          <%= link_to t.title, t, class: "black-text"  %>
+        </div>
       <% end %>
-    </table>
   </div>
-
-  <div class="index-second text-center">
-    <table class="table">
-      <h1>Fitness</h1>
+  <div class="card text-center well col-md-4 col-xs-6">
+    <img src="https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="image">
+      <h1 class="white-text" >Fitness</h1>
       <% @fit.each do |t| %>
-      <tr>
-        <%= link_to t.title, t %>
-      </tr>
-        <br>
+      <div>
+        <%= link_to t.title, t, class: "black-text"  %>
+      </div>
       <% end %>
-
-      <h1>Sports</h1>
-      <% @sport.each do |t| %>
-      <tr>
-        <%= link_to t.title, t %>
-      </tr>
-        <br>
-      <% end %>
-
-      <h1>Music</h1>
-      <% @music.each do |t| %>
-      <tr>
-        <%= link_to t.title, t %>
-      </tr>
-        <br>
-      <% end %>
-      </table>
-    </div>
   </div>
+  <div class="card text-center well col-md-4 col-xs-6">
+    <img src="https://images.pexels.com/photos/173358/pexels-photo-173358.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="image">
+      <h1 class="white-text" >Sports</h1>
+      <% @sport.each do |t| %>
+      <div>
+        <%= link_to t.title, t, class: "black-text"  %>
+      </div>
+      <% end %>
+  </div>
+  <div class="card text-center well col-md-4 col-xs-6">
+    <img src="https://images.pexels.com/photos/70222/pexels-photo-70222.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="image">
+      <h1 class="white-text" >Music</h1>
+      <% @music.each do |t| %>
+      <div>
+        <%= link_to t.title, t, class: "black-text"  %>
+      </div>
+      <% end %>
+    </div>
+</div>
