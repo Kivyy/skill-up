@@ -1,26 +1,22 @@
-# README
+Welcome to Tutor-Skill
+ 
+Where those who want to expand their knowledge in exchange for more knowledge. 
+ 
+Users can register for an account
+ 
+Users can login/logout
+ 
+Users can browse the extensive library of categories
+ 
+Users can choose to make a connection with a skill they want to learn
+ 
+Users can choose which offer they want to accept
+ 
+Users can leave messages to each other
+ 
+Users can add skills
+ 
+Users can make posts to advertise their skills  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Users can search for keywords
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-bundle exec rake assets:precompile
