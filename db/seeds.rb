@@ -11,9 +11,7 @@ Skill.create(title: "Woodwind Instruments", category: "Music", img_url: "https:/
 Skill.create(title: "Percussion", category: "Music", img_url: "https://images.pexels.com/photos/210799/pexels-photo-210799.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Keyboard", category: "Music", img_url: "https://images.pexels.com/photos/48620/pexels-photo-48620.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Music Production", category: "Music", img_url: "https://images.pexels.com/photos/87351/pexels-photo-87351.jpeg?h=350&auto=compress&cs=tinysrgb")
-Skill.create(title: "Ear Pitch", category: "Music", img_url: "https://images.pexels.com/photos/38894/pexels-photo-38894.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Composition", category: "Music", img_url: "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?h=350&auto=compress&cs=tinysrgb")
-Skill.create(title: "Improvisation", category: "Music", img_url: "https://images.pexels.com/photos/30717/pexels-photo-30717.jpg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Other", category: "Music", img_url: "https://images.pexels.com/photos/30222/pexels-photo-30222.jpg?h=350&auto=compress&cs=tinysrgb")
 
 Skill.create(title: "Aquatic Sports", category: "Sports", img_url: "https://images.pexels.com/photos/8983/pexels-photo.jpeg?h=350&auto=compress&cs=tinysrgb")
