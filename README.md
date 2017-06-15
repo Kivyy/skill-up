@@ -1,26 +1,24 @@
-# README
+# Skill Up
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Rails](http://emojis.slackmojis.com/emojis/images/1467305311/619/ruby_on_rails.png?1467305311)](rubyonrails.org)
 
-Things you may want to cover:
+Skill Up is an app where users can interact with each other and exchange knowledge of different skills. Browse posts, make new ones, search for anything that interests you and connect!
 
-* Ruby version
+## Authors:
 
-* System dependencies
+  - Carlos Grijalva
+  - Jason Wong
+  - Tom Feng
+  - Kiv Lo
+  - Alex Camacho
 
-* Configuration
+## Built With:
+    - Ruby on Rails
+    - Ajax
+    - Bootstrap/Sass
 
-* Database creation
+## Notes:
+ This project was part for DBC's curriculum during the final weeks. For more information on this program [click here](https://devbootcamp.com)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-bundle exec rake assets:precompile
+## License:
+ This project is licensed under the MIT License - see the [LICENSE.md](#) file for details
