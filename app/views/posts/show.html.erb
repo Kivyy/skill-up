@@ -9,7 +9,7 @@
       <%= link_to image_tag(@post.skill.img_url, :class => "img-fluid post-img", size: "320x256"), post_path(@post.id) %>
       <br>
       <div link-to-user>
-        <%= link_to 'User Profile',  user_path(@post.creator), style: 'width:34%;', :class => "btn btn-primary btn-user" %>
+        <%= link_to "#{@post.creator.username}'s profile",  user_path(@post.creator), style: 'width:34%;', :class => "btn btn-primary btn-user" %>
       </div>
   </div>
 
