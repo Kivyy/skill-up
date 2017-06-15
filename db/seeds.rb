@@ -71,3 +71,9 @@ user3.posts.create(skill_id: 29, description: "Originally from Mexico, I have be
 user3.posts.create(skill_id: 28, description: "Learned how to cook asian dishes during my time spent in Japan")
 user3.posts.create(skill_id: 23, description: "Have been tutoring for the past year, extensive knowledge in strategies to succeed in SAT's")
 user3.posts.create(skill_id: 25, description: "Graduated fomr DBC, able to teach Ruby/Rails and Javascript")
+
+user2.posts.create(skill_id: 28, description: "I can teach you how to make sesame chicken combined with General Tso chicken")
+user2.post.create(skill_id: 39, description: "I have been working with no SQL base database such as MongoDB")
+user2.post.create(skill_id: 11, description: "Professional pool volleyball player looking to pass on some of my spiking move")
+user2.post.create(skill_id: 12, description: "Muscle up expert willing to train beginner to be able to do muscle up in one month")
+user2.post.create(skill_id: 15, description: "2 times Mt.Vermont skii champion , I can teach you how to perform tricks")
