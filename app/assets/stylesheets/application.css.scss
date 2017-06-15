@@ -68,10 +68,6 @@ th {
   font-size: 20px;
 }
 
-#footer {
-  background-color: #5a5c5e;
-  height: 150px;
-}
 
 .right-table {
     width:47%;
@@ -142,6 +138,8 @@ th {
 
 .card {
   width: 25rem;
+  float: left;
+  margin-top: 10px;
 }
 
 .img-post {
@@ -222,4 +220,9 @@ th {
 
 .post-img {
   border-radius: 25px;
+}
+
+.card-title {
+  font-family: 'Fredoka One', cursive;
+  color: #666666;
 }
