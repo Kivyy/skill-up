@@ -88,13 +88,13 @@
   <div class="table-responsive">
     <table class="table">
     <th>Offer</th>
-    <th>Requester</th>
+    <th>Recipient</th>
     <th>Skill Page</th>
     <th>Messages</th>
           <% @requests.each do |a| %>
         <tr>
           <td><%= a.offer %></td>
-          <td><%= link_to a.requestor.username, user_path(a.requestor_id) %></td>
+          <td><%= link_to a.post.creator.username, user_path(a.post.creator) %></td>
           <td><%= link_to a.post.skill.title, post_path(a.post) %></td>
           <td>
            <% if a.accepted == false %>
