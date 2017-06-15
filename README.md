@@ -10,6 +10,7 @@ Skill Up is an app where users can interact with each other and exchange knowled
   - Jason Wong
   - Tom Feng
   - Kiv Lo
+  - Alex Camacho
 
 ## Built With:
     - Ruby on Rails
