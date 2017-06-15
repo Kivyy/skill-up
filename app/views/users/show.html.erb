@@ -3,7 +3,7 @@
 <%= @errors %>
 <% end %>
 
-
+<div class="user-show-all">
 <div class="container">
   <h1>Welcome <%= @user.first_name %>!</h1>
   <div class="row">
@@ -35,7 +35,7 @@
     <div class="table-responsive">
       <table class="table table-striped">
         <thead class="thead-inverse">
-          <h2>Skills I have</h2>
+          <u><h2>Skills I have</h2></u>
           <tr>
             <th>Title</th>
             <th>Description</th>
@@ -58,7 +58,7 @@
 </div>
 
 <div class="container">
-<h2>Connections</h2>
+<u><h2>Connections</h2></u>
   <table class="table table-striped">
     <th>Offer</th>
     <th>Requester</th>
@@ -84,7 +84,7 @@
 </div>
 
 <div class="container">
-  <h2>Requests</h2>
+  <u><h2>Requests</h2></u>
   <div class="table-responsive">
     <table class="table">
     <th>Offer</th>
@@ -111,7 +111,7 @@
 <div class="container">
   <div class="form-group">
       <% if logged_in? && (current_user.id === @user.id) %>
-        <h2>Add Skill</h2>
+        <u><h2>Add Skill</h2></u></br>
         <%= form_for Post.new do |f| %>
             <%= f.label :skill %>
              <%= f.collection_select(:skill_id, Skill.all, :id, :title) %>
@@ -125,4 +125,5 @@
       <% end %>
       <br><br>
   </div>
+</div>
 </div>
