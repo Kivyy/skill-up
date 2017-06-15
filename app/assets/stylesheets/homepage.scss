@@ -20,12 +20,12 @@
 }
 
 #seconddiv {
-background-color: #27252d;
- height:350px;
- color: white;;
- font-size: 35px;
- font-family: 'Rubik', sans-serif;
- box-shadow: 5px 5px 5px black;
+  background-color: #333138;
+  height:350px;
+  color: white;;
+  font-size: 35px;
+  font-family: 'Rubik', sans-serif;
+  box-shadow: 5px 5px 5px black;
 }
 
 .step-col-1 {
@@ -61,7 +61,7 @@ padding: 1%;
   overflow: scroll;
   padding-top: 15px;
   height: 400px;
-  background-color: #6d7177;
+  background-color: #333138;
   color: white;
   box-shadow: 5px 5px 5px #888888;
 }
@@ -116,20 +116,8 @@ hr.star-primary:after {
 }
 
 
-// footer
-footer{
-    padding-top: 120px;
-    background-color: #80edd9;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 65px;
-    text-align: center;
-    color: #CCC;
-}
-
-footer p {
-    padding: 25px;
-    margin: 0px;
-    line-height: 100%;
+.explore-btn {
+  width: 25%;
+  background-color: #333138;
+  color: white;
 }

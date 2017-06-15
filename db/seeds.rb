@@ -1,9 +1,9 @@
 user1 = User.create(first_name: "joe", last_name: "joe", username: "joe", email: "joe@gmail.com", password: "password")
-user2 = User.create(first_name: "kiv", last_name: "joe", username: "kiv", email: "kiv@gmail.com", password: "password")
-user3 = User.create(first_name: "carlos", last_name: "joe", username: "carlos", email: "carlos@gmail.com", password: "password")
-user4 = User.create(first_name: "alex", last_name: "joe", username: "alex", email: "alex@gmail.com", password: "password")
-user5 = User.create(first_name: "jason", last_name: "joe", username: "jason", email: "jason@gmail.com", password: "password")
-user6 = User.create(first_name: "tom", last_name: "joe", username: "tom", email: "tom@gmail.com", password: "password")
+user2 = User.create(first_name: "Kiv", last_name: "Smith", username: "kiv", email: "kiv@gmail.com", password: "password")
+user3 = User.create(first_name: "Carlos", last_name: "Smith", username: "carlos", email: "carlos@gmail.com", password: "password")
+user4 = User.create(first_name: "Alex", last_name: "Smith", username: "alex", email: "alex@gmail.com", password: "password")
+user5 = User.create(first_name: "Jason", last_name: "Smith", username: "jason", email: "jason@gmail.com", password: "password")
+user6 = User.create(first_name: "Tom", last_name: "Smith", username: "tom", email: "tom@gmail.com", password: "password")
 
 Skill.create(title: "String Instruments", category: "Music", img_url: "https://images.pexels.com/photos/111287/pexels-photo-111287.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Brass Instruments", category: "Music", img_url: "https://images.pexels.com/photos/45243/saxophone-music-gold-gloss-45243.jpeg?h=350&auto=compress&cs=tinysrgb")
@@ -11,9 +11,7 @@ Skill.create(title: "Woodwind Instruments", category: "Music", img_url: "https:/
 Skill.create(title: "Percussion", category: "Music", img_url: "https://images.pexels.com/photos/210799/pexels-photo-210799.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Keyboard", category: "Music", img_url: "https://images.pexels.com/photos/48620/pexels-photo-48620.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Music Production", category: "Music", img_url: "https://images.pexels.com/photos/87351/pexels-photo-87351.jpeg?h=350&auto=compress&cs=tinysrgb")
-Skill.create(title: "Ear Pitch", category: "Music", img_url: "https://images.pexels.com/photos/38894/pexels-photo-38894.jpeg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Composition", category: "Music", img_url: "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?h=350&auto=compress&cs=tinysrgb")
-Skill.create(title: "Improvisation", category: "Music", img_url: "https://images.pexels.com/photos/30717/pexels-photo-30717.jpg?h=350&auto=compress&cs=tinysrgb")
 Skill.create(title: "Other", category: "Music", img_url: "https://images.pexels.com/photos/30222/pexels-photo-30222.jpg?h=350&auto=compress&cs=tinysrgb")
 
 Skill.create(title: "Aquatic Sports", category: "Sports", img_url: "https://images.pexels.com/photos/8983/pexels-photo.jpeg?h=350&auto=compress&cs=tinysrgb")
@@ -53,6 +51,10 @@ Skill.create(title: "Big Data", category: "Technology", img_url: "https://images
 Skill.create(title: "Other", category: "Technology", img_url: "https://images.pexels.com/photos/90807/pexels-photo-90807.jpeg?h=350&auto=compress&cs=tinysrgb")
 
 user5.posts.create(skill_id: 13, description: "Attained my blackbelt at the age of 13, my hands are lethal")
+user5.posts.create(skill_id: 18, description: "I spend 3 out of 7 days committing myself to cardio. My go to machine is the stair master. I enjoy climbing the Empire State building. After completing this climb, I then go into a ab circuit, where I do v-ups, crunches, reverse crunches, plank, side to side plank, then hanging leg lifts to the highest elevation I can. I then do goblin swats for 3 sets with a 45 pound weight, 10 resp each set. By this time, my entire shirt is drenched with sweat.")
+user5.posts.create(skill_id: 19, description: "I spend 3 out of 7 days lifting. My goal during every session is to push my body to fatigue and end the session by doing dips until failure. During the session, I start with 3 chest exercises, flat bench press, chest fly machine, then machine chest press. Afterwards I move to my back, with machine rows, lat-pull downs, and close grip rows. Then I do tricep pull downs, shoulder raises and a ab circuit. Ending with dips. I have grown from doing no dips to a max of 30 dips.")
+user5.posts.create(skill_id: 20, description: "I started my macro journey 10 weeks ago. My intentions with measuring my macro intake was to gauge my metabolic rate. Understanding how my body reacts to certain foods and caloric intake gave me the knowledge to draft an efficient diet that I enjoyed. As time passed and I became accustomed to by daily allowance of calories, I have now pushed myself further and became intermediate fasting. My goal is to reduce my overall body-fat percentage. Join me and become the best version of yourself.")
+user5.posts.create(skill_id: 21, description: "The daily nutrition that I find essential is protein with BCAA. BCAA aka Branched-Chain Amino Acid, allows for accelerated muscle recovery. The best part is that it allows for muscle growth while in a caloric deficit. It is perfect for those who want to lose weight without compromising one’s strength. However, the most important thing is still sleep. No matter how many supplements you take, if you don't have healthy sleep regime your body will not be able to react to the supplements to its full potential.")
 
 user4.posts.create(skill_id: 18, description: "I've been running on and off for about 15 years. My longest run has been a little over 8 miles but my usual distance is around 3 miles. My average pace is a 8:30 mile. I practice proper form and would love to teach you in exchange for some sweet skills!")
 user4.posts.create(skill_id: 14, description: "I used to compete in High School and College and have one national competitions. I have a fantastic routine and can help you reach your goals!")

@@ -1,87 +1,88 @@
-/* line 5, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
-.firstdiv {
-  background-color: #80edd9;
-  height: 600px;
-  color: white;
+/* line 6, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+.skills {
+  font-weight: bold;
 }
 
-/* line 13, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 10, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 .stepheader {
   padding: 10px;
   font-family: 'Lalezar', cursive;
 }
 
-/* line 19, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 15, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+.header-div {
+  background-color: white;
+  padding-top: 15px;
+  width: 80%;
+  box-shadow: 5px 5px 5px black;
+}
+
+/* line 22, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 #seconddiv {
-  background-image: url("https://code2prog.com/wp-content/uploads/2015/01/ceystalhorizon-flat-design-wallpapers-HD-free-wallpapers-backgrounds-images-FHD-4k-download-2014-2015-2016.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: #27252d;
   height: 350px;
   color: white;
-  font-size: 25px;
-  font-family: 'Bungee', cursive;
+  font-size: 35px;
+  font-family: 'Rubik', sans-serif;
+  box-shadow: 5px 5px 5px black;
 }
 
-/* line 30, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 31, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 .step-col-1 {
-  border-right: thin solid white;
+  border-right: thin solid black;
   height: 200px;
   padding: 1%;
 }
 
-/* line 36, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 37, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 .step-col-2 {
-  border-right: thin solid white;
+  border-right: thin solid black;
   height: 200px;
   padding: 1%;
 }
 
-/* line 42, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 43, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 .step-col-3 {
-  border-right: thin solid white;
+  border-right: thin solid black;
   height: 200px;
   padding: 1%;
 }
 
 /* line 49, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 .step-li {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 /* line 53, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 #explore-div {
   padding: 25px;
   height: 200px;
+  font-size: 25px;
+  box-shadow: 3px 3px 3px #888888;
 }
 
-/* line 58, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 60, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 #category-div {
+  overflow: scroll;
   padding-top: 15px;
   height: 400px;
-  background-color: #80edd9;
-  color: grey;
+  background-color: #6d7177;
+  color: white;
+  box-shadow: 5px 5px 5px #888888;
 }
 
-/* line 65, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 69, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 header {
   text-align: center;
-  background: #80edd9;
-  color: white;
+  height: 975px;
+  background-image: url("https://static.pexels.com/photos/7097/people-coffee-tea-meeting.jpg");
+  background-size: cover;
+  color: #2f3030;
+  box-shadow: 5px 5px 5px #888888;
+  padding: 15%;
 }
 
-/* line 70, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
-header .container {
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-
-/* line 74, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
-header img {
-  display: block;
-  margin: 0 auto 20px;
-}
-
-/* line 78, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 79, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 header .intro-text .name {
   display: block;
   font-family: 'Bungee', cursive;
@@ -90,49 +91,68 @@ header .intro-text .name {
   font-size: 2em;
 }
 
-/* line 85, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 86, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
 
 @media (min-width: 768px) {
-  /* line 90, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+  /* line 91, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
   header .container {
     padding-top: 200px;
     padding-bottom: 100px;
   }
 
-  /* line 94, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+  /* line 95, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
   header .intro-text .name {
     font-size: 4.75em;
   }
 
-  /* line 97, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+  /* line 98, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
   header .intro-text .skills {
     font-size: 1.75em;
   }
 }
-/* line 102, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 103, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 hr.star-light {
   border-color: white;
 }
 
-/* line 105, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 106, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 hr.star-light:after {
   background-color: #18BC9C;
   color: white;
 }
 
-/* line 109, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 110, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 hr.star-primary {
   border-color: #2C3E50;
 }
 
-/* line 112, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+/* line 113, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
 hr.star-primary:after {
   background-color: white;
   color: #2C3E50;
+}
+
+/* line 120, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+footer {
+  padding-top: 120px;
+  background-color: #80edd9;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  text-align: center;
+  color: #CCC;
+}
+
+/* line 131, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/homepage.scss */
+footer p {
+  padding: 25px;
+  margin: 0px;
+  line-height: 100%;
 }
 @charset "UTF-8";
 /*!
@@ -40075,6 +40095,38 @@ html.ios {
 /*******************************
          Site Overrides
 *******************************/
+/* line 6, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/messages.scss */
+.messages-container {
+  width: 50%;
+}
+
+/* line 10, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/messages.scss */
+.black-bg {
+  background-color: gray;
+}
+
+/* line 14, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/messages.scss */
+#message-header {
+  padding-left: 5%;
+}
+
+/* line 18, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/messages.scss */
+.panel-heading {
+  black-color: black;
+}
+
+/* line 22, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/messages.scss */
+.center-objects {
+  margin: 0 auto;
+}
+
+/* line 26, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/messages.scss */
+.text-of-card {
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: gray;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -40106,14 +40158,14 @@ html.ios {
   margin-left: 5%;
 }
 
-/* line 32, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 33, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 .search-bar {
   float: right;
 }
 
-/* line 36, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 37, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 .navbar-inner {
-  background-color: #80edd9;
+  background-color: #2f3030;
   border-bottom: thin solid transparent;
   font-family: 'Bungee', cursive;
   text-align: center;
@@ -40122,19 +40174,8 @@ html.ios {
   padding: 0;
 }
 
-/* line 47, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
-.navbar-li {
-  color: white;
-}
-
-/* line 50, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
 @media (min-width: 767px) {
-  /* line 56, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+  /* line 50, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
   .navbar {
     padding: 20px 0;
     -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -40142,74 +40183,42 @@ html.ios {
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
 
-  /* line 63, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+  /* line 57, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
   .top-nav-collapse {
     padding: 0;
   }
 }
-/* line 68, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
-.intro-section {
-  height: 100%;
-  padding-top: 150px;
-  text-align: center;
-  background: #fff;
-}
-
-/* line 75, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
-.about-section {
-  height: 100%;
-  padding-top: 150px;
-  text-align: center;
-  background: #eee;
-}
-
-/* line 82, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
-.services-section {
-  height: 100%;
-  padding-top: 150px;
-  text-align: center;
-  background: #fff;
-}
-
-/* line 89, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
-.contact-section {
-  height: 100%;
-  padding-top: 150px;
-  text-align: center;
-  background: #eee;
-}
-
-/* line 96, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 63, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 body {
-  font-family: 'Lalezar', cursive;
+  font-family: 'Rubik', sans-serif;
 }
 
-/* line 101, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 68, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 th {
   font-size: 20px;
 }
 
-/* line 105, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 72, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 #footer {
   background-color: #5a5c5e;
   height: 150px;
 }
 
-/* line 110, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 77, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 .right-table {
   width: 47%;
   margin-right: 2%;
   float: right;
 }
 
-/* line 116, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 83, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 .left-table {
   width: 47%;
   margin-right: 2%;
   float: left;
 }
 
-/* line 122, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 89, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 .add-skill {
   margin-top: 200px;
   width: 47%;
@@ -40217,17 +40226,154 @@ th {
   position: absolute;
 }
 
-/* line 129, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 96, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 .index-first {
   width: 45%;
   margin-right: 2%;
+  margin-left: 2%;
   float: left;
+  background-color: #D3D3D3;
+  box-shadow: 10px 10px 5px #888888;
 }
 
-/* line 135, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+/* line 105, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
 .index-second {
   width: 45%;
   margin-right: 2%;
+  margin-left: 2%;
   float: right;
   margin-bottom: 10%;
+  background-color: #D3D3D3;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+/* line 115, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.skill-index {
+  margin-top: 100px;
+  color: #5F9EA0;
+  background-color: yellow;
+}
+
+/* line 121, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.skill-show {
+  position: absolute;
+  top: 50%;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 129, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.skill-new-post {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  border: 3px solid #73AD21;
+}
+
+/* line 137, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.card-border {
+  border-style: groove;
+  border-radius: 25px;
+  padding-bottom: 50px;
+  margin: 0 20px 0 20px;
+}
+
+/* line 144, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.card {
+  width: 25rem;
+}
+
+/* line 148, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.img-post {
+  border-radius: 40px;
+  margin-top: 10px;
+}
+
+/* line 153, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.display-of-cards {
+  justify-content: space-between;
+}
+
+/* line 157, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.skill-post {
+  margin-bottom: 40px;
+}
+
+/* line 161, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.skill-body {
+  color: #191970;
+}
+
+/* line 165, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.post-main {
+  padding: 1% 5% 5% 8%;
+  background-color: #dadfe8;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+/* line 171, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.description-box {
+  background-color: white;
+  padding-top: 15px;
+}
+
+/* line 176, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.user-profile-page-link {
+  background-color: white;
+}
+
+/* line 180, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.offer-box {
+  font-size: 25px;
+}
+
+/* line 184, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.image-box {
+  background-color: black;
+  margin: 0 auto;
+}
+
+/* line 189, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.img-fluid {
+  margin: auto auto;
+  display: block;
+}
+
+/* line 194, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.btn-user {
+  margin: auto auto;
+  display: block;
+  background-color: grey;
+}
+
+/* line 200, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.btn-lg {
+  margin: auto auto;
+  display: block;
+}
+
+/* line 209, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.app-list {
+  padding: 1%;
+}
+
+/* line 213, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.footer-class {
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 216, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.footer-class .container {
+  text-align: center;
+}
+/* line 218, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.footer-class .container p {
+  width: 100%;
+}
+
+/* line 224, /Users/AlexCamacho/Desktop/DBC Assignments/phase-3/skill-up/app/assets/stylesheets/application.css.scss */
+.post-img {
+  border-radius: 25px;
 }
