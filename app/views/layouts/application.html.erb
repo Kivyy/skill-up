@@ -22,7 +22,7 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class='black-bg'>
     <nav class="navbar navbar-default navbar-fixed-top navbar-inner" role="navigation">
             <div class="container">
                 <div class="navbar-header page-scroll">
@@ -48,7 +48,6 @@
                           <%= link_to "Login",   '/login' ,class: "navbar-li"%>
                         </li>
                         <% end %>
-
                     </ul>
                     <div class="pull-right search-bar">
                       <%= form_tag posts_search_path, method: "get" do %>
